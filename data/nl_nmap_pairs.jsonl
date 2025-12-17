@@ -1,0 +1,504 @@
+{"nl": "perform a comprehensive port scan on 172.16.20.4", "command": "nmap -sC -sV 172.16.20.4"}
+{"nl": "detect what services and versions are running on 172.31.0.1", "command": "nmap -sV 172.31.0.1"}
+{"nl": "do a full network scan on example.com", "command": "nmap -A example.com"}
+{"nl": "quickly scan the most common ports on 192.168.1.1", "command": "nmap -F 192.168.1.1"}
+{"nl": "scan all possible ports on scanme.nmap.org", "command": "nmap -p- scanme.nmap.org"}
+{"nl": "perform a stealth SYN scan on 10.0.0.5", "command": "nmap -sS 10.0.0.5"}
+{"nl": "check for open UDP ports on 172.20.10.20", "command": "nmap -sU 172.20.10.20"}
+{"nl": "run default scripts and version detection on target.com", "command": "nmap -sC -sV target.com"}
+{"nl": "scan ports from 1 to 10000 on 192.168.0.100", "command": "nmap -p1-10000 192.168.0.100"}
+{"nl": "aggressive scan with OS detection on 8.8.8.8", "command": "nmap -A -O 8.8.8.8"}
+{"nl": "fast scan of the top 1000 ports on myrouter.local", "command": "nmap --top-ports 1000 myrouter.local"}
+{"nl": "ping scan the entire 192.168.1.0/24 network", "command": "nmap -sn 192.168.1.0/24"}
+{"nl": "scan without pinging first on 203.0.113.10", "command": "nmap -Pn 203.0.113.10"}
+{"nl": "verbose SYN scan on server.example.net", "command": "nmap -v -sS server.example.net"}
+{"nl": "detect versions on web ports for 10.10.10.10", "command": "nmap -sV -p 80,443,8080 10.10.10.10"}
+{"nl": "perform a full TCP connect scan on oldhost.com", "command": "nmap -sT oldhost.com"}
+{"nl": "scan SSH, HTTP and HTTPS ports on 172.16.1.50", "command": "nmap -p 22,80,443 172.16.1.50"}
+{"nl": "run vulnerability detection scripts on 192.168.50.5", "command": "nmap --script vuln 192.168.50.5"}
+{"nl": "quick scan the whole subnet 10.0.0.0/24", "command": "nmap -F 10.0.0.0/24"}
+{"nl": "do OS detection and traceroute on remotehost.com", "command": "nmap -O --traceroute remotehost.com"}
+{"nl": "scan ports 21,22,25,80 on hosts 192.168.1.10 to 192.168.1.20", "command": "nmap -p 21,22,25,80 192.168.1.10-20"}
+{"nl": "perform a stealth FIN scan on 172.31.255.255", "command": "nmap -sF 172.31.255.255"}
+{"nl": "scan top 100 UDP ports on dns.server", "command": "nmap -sU --top-ports 100 dns.server"}
+{"nl": "verbose aggressive scan on internal server 10.1.1.1", "command": "nmap -v -A 10.1.1.1"}
+{"nl": "only show open ports on host.com", "command": "nmap --open host.com"}
+{"nl": "detect service versions on well-known ports for 203.0.113.50", "command": "nmap -sV -p1-1024 203.0.113.50"}
+{"nl": "perform an Xmas scan on 192.168.100.1", "command": "nmap -sX 192.168.100.1"}
+{"nl": "run only safe NSE scripts on router 192.168.0.1", "command": "nmap --script safe 192.168.0.1"}
+{"nl": "fast version scan on common ports for example.org", "command": "nmap -F -sV example.org"}
+{"nl": "perform a null scan on targetip", "command": "nmap -sN targetip"}
+{"nl": "enumerate HTTP services on ports 80,443,8080 for web.target", "command": "nmap -p 80,443,8080 --script http-enum web.target"}
+{"nl": "discover live hosts in range 10.10.10.1-255", "command": "nmap -sn 10.10.10.1-255"}
+{"nl": "aggressive scan skipping host discovery on 8.8.4.4", "command": "nmap -A -Pn 8.8.4.4"}
+{"nl": "check if MySQL is open on 172.16.0.10", "command": "nmap -p 3306 172.16.0.10"}
+{"nl": "verbose OS and service version scan on mail.server.com", "command": "nmap -v -O -sV mail.server.com"}
+{"nl": "fragment packets to evade detection on secured.host", "command": "nmap -f secured.host"}
+{"nl": "scan top 20 ports on subnet 192.168.2.0/24", "command": "nmap --top-ports 20 192.168.2.0/24"}
+{"nl": "run default scripts on printer 10.0.2.15", "command": "nmap -sC 10.0.2.15"}
+{"nl": "perform TCP window scan on 172.20.20.20", "command": "nmap -sW 172.20.20.20"}
+{"nl": "find open SSH ports in subnet 10.11.12.0/24", "command": "nmap -p 22 --open 10.11.12.0/24"}
+{"nl": "full port scan with fast timing on fast.host", "command": "nmap -p- -T4 fast.host"}
+{"nl": "check for SMB vulnerabilities on fileserver", "command": "nmap --script smb-vuln* fileserver"}
+{"nl": "verbose UDP scan on voip.server", "command": "nmap -v -sU voip.server"}
+{"nl": "scan common database ports on db.host", "command": "nmap -p 1433,3306,5432,1521 db.host"}
+{"nl": "aggressive scan with traceroute on remote.site", "command": "nmap -A --traceroute remote.site"}
+{"nl": "quick host discovery on large network 172.16.0.0/16", "command": "nmap -sn 172.16.0.0/16"}
+{"nl": "version detection only on open ports for app.server", "command": "nmap -sV --open app.server"}
+{"nl": "perform a Maimon scan on test.target", "command": "nmap -sM test.target"}
+{"nl": "grab page titles from web servers on site.com", "command": "nmap -p 80,443 --script http-title site.com"}
+{"nl": "basic scan on localhost", "command": "nmap 127.0.0.1"}
+{"nl": "scan all ports and show only open ones on secure.box", "command": "nmap -p- --open secure.box"}
+{"nl": "detect the operating system on 192.168.3.50", "command": "nmap -O 192.168.3.50"}
+{"nl": "fast aggressive scan on cloud.instance", "command": "nmap -A -F cloud.instance"}
+{"nl": "check if RDP is open on windows.host", "command": "nmap -p 3389 windows.host"}
+{"nl": "very verbose full scan with insane timing on slow.target", "command": "nmap -v -p- -T5 slow.target"}
+{"nl": "scan FTP and Telnet ports on old.server", "command": "nmap -p 21,23 old.server"}
+{"nl": "run discovery scripts on local network 192.168.4.0/24", "command": "nmap --script discovery 192.168.4.0/24"}
+{"nl": "SYN scan using decoy IPs on protected.host", "command": "nmap -sS -D RND:10 protected.host"}
+{"nl": "intense version detection on service.host", "command": "nmap -sV --version-all service.host"}
+{"nl": "scan common web ports aggressively on webapp.com", "command": "nmap -A -p 80,443,8080 webapp.com"}
+{"nl": "ping scan without port scan on 10.0.1.0/24", "command": "nmap -sn 10.0.1.0/24"}
+{"nl": "check PostgreSQL port on db.server", "command": "nmap -p 5432 db.server"}
+{"nl": "run brute force scripts on login services for auth.target", "command": "nmap --script brute auth.target"}
+{"nl": "scan top 500 ports quickly on router.local", "command": "nmap --top-ports 500 router.local"}
+{"nl": "verbose version scan on mailserver 192.168.10.10", "command": "nmap -v -sV 192.168.10.10"}
+{"nl": "perform idle scan using zombie on hidden.target", "command": "nmap -sI zombie.host hidden.target"}
+{"nl": "scan SNMP ports on network devices 172.16.5.0/24", "command": "nmap -p 161,162 172.16.5.0/24"}
+{"nl": "aggressive scan with scripting on api.example.com", "command": "nmap -A api.example.com"}
+{"nl": "detect open ports without DNS resolution on noresolve.host", "command": "nmap -n noresolve.host"}
+{"nl": "run default scripts with timing 3 on medium.speed", "command": "nmap -sC -T3 medium.speed"}
+{"nl": "scan for open VNC ports on 10.10.20.0/24", "command": "nmap -p 5900-5909 --open 10.10.20.0/24"}
+{"nl": "basic SYN scan on multiple targets 192.168.1.1 192.168.1.100", "command": "nmap -sS 192.168.1.1 192.168.1.100"}
+{"nl": "check if Redis is exposed on 172.30.0.5", "command": "nmap -p 6379 172.30.0.5"}
+{"nl": "verbose full port scan on internal.db", "command": "nmap -v -p- internal.db"}
+{"nl": "run SSL enumeration scripts on https sites for ssl.target", "command": "nmap --script ssl-enum-ciphers ssl.target"}
+{"nl": "quick scan top 100 ports on many hosts 10.0.0.0/22", "command": "nmap --top-ports 100 10.0.0.0/22"}
+{"nl": "detect OS aggressively on unknown.device", "command": "nmap -A -O unknown.device"}
+{"nl": "scan MongoDB port on database 192.168.50.50", "command": "nmap -p 27017 192.168.50.50"}
+{"nl": "perform ACK scan for firewall rules on fw.test", "command": "nmap -sA fw.test"}
+{"nl": "run banner grabbing on open ports for banner.host", "command": "nmap -sV --script banner banner.host"}
+{"nl": "fast scan with version light on light.target", "command": "nmap -F --version-light light.target"}
+{"nl": "discover hosts using ARP on local segment 192.168.100.0/24", "command": "nmap -PR 192.168.100.0/24"}
+{"nl": "scan common mail ports on mail.server", "command": "nmap -p 25,465,587,993 mail.server"}
+{"nl": "aggressive scan on VPN endpoint vpn.company.com", "command": "nmap -A vpn.company.com"}
+{"nl": "check Elasticsearch port on bigdata.host", "command": "nmap -p 9200 bigdata.host"}
+{"nl": "verbose UDP top ports on router.gateway", "command": "nmap -v -sU --top-ports 50 router.gateway"}
+{"nl": "run default scripts without ping on offline.maybe", "command": "nmap -sC -Pn offline.maybe"}
+{"nl": "scan for open proxy ports on proxy.check", "command": "nmap -p 3128,8080,1080 proxy.check"}
+{"nl": "full aggressive scan with OS on server.internal", "command": "nmap -A -O server.internal"}
+{"nl": "detect versions on custom ports 8080 and 8443 for app.server", "command": "nmap -sV -p 8080,8443 app.server"}
+{"nl": "quick host discovery with verbose output on lan.scan", "command": "nmap -v -sn lan.scan"}
+{"nl": "run http methods script on web.api", "command": "nmap --script http-methods web.api"}
+{"nl": "scan top 200 ports with timing 4 on fast.network", "command": "nmap --top-ports 200 -T4 fast.network"}
+{"nl": "perform version scan with all probes on detailed.host", "command": "nmap -sV --version-all detailed.host"}
+{"nl": "check if Memcached is open on cache.server", "command": "nmap -p 11211 cache.server"}
+{"nl": "aggressive scan skipping DNS on no.dns.target", "command": "nmap -A -n no.dns.target"}
+{"nl": "run safe scripts on public facing server public.ip", "command": "nmap --script safe public.ip"}
+{"nl": "scan common VoIP ports on pbx.system", "command": "nmap -p 5060,5061,10000-20000 pbx.system"}
+{"nl": "scan for open Kubernetes API ports on cluster nodes 10.20.0.0/24", "command": "nmap -p 6443,10250 --open 10.20.0.0/24"}
+{"nl": "run default scripts and show reasons on device.local", "command": "nmap -sC --reason device.local"}
+{"nl": "perform a quick scan with OS detection on router 192.168.1.254", "command": "nmap -F -O 192.168.1.254"}
+{"nl": "check common remote management ports on server 203.0.113.20", "command": "nmap -p 22,23,3389,5900 server"}
+{"nl": "aggressive scan with version intensity high on api.service", "command": "nmap -A --version-all api.service"}
+{"nl": "discover live hosts using only TCP SYN ping on subnet 172.18.0.0/24", "command": "nmap -PS 172.18.0.0/24"}
+{"nl": "scan for Docker exposed ports on host 10.5.5.5", "command": "nmap -p 2375,2376 10.5.5.5"}
+{"nl": "run http robots.txt script on web servers for site.com", "command": "nmap -p 80,443 --script http-robots.txt site.com"}
+{"nl": "verbose scan with packet trace on debug.target", "command": "nmap -v --packet-trace debug.target"}
+{"nl": "fast scan top 300 ports on large network 10.100.0.0/20", "command": "nmap --top-ports 300 10.100.0.0/20"}
+{"nl": "detect services without host discovery on maybe.down", "command": "nmap -sV -Pn maybe.down"}
+{"nl": "scan for open NTP ports on time.server", "command": "nmap -p 123 time.server"}
+{"nl": "run vulnerability scripts only on open ports for vuln.check", "command": "nmap --script vuln --open vuln.check"}
+{"nl": "SYN scan with source port 53 on dns.evasion", "command": "nmap -sS -g 53 dns.evasion"}
+{"nl": "check common game server ports on gaming.host", "command": "nmap -p 25565,27015,7777 gaming.host"}
+{"nl": "aggressive scan with stats every 10 seconds on long.scan", "command": "nmap -A --stats-every 10s long.scan"}
+{"nl": "scan all ports slowly to avoid detection on stealth.target", "command": "nmap -p- -T2 stealth.target"}
+{"nl": "run smb enumeration scripts on windows.file", "command": "nmap --script smb-enum* windows.file"}
+{"nl": "quick version scan on common ports for quick.check", "command": "nmap -F -sV quick.check"}
+{"nl": "perform UDP scan on top 50 ports for udp.device", "command": "nmap -sU --top-ports 50 udp.device"}
+{"nl": "scan for open LDAP ports on directory.server", "command": "nmap -p 389,636 directory.server"}
+{"nl": "verbose aggressive scan without DNS resolution on ip.only", "command": "nmap -v -A -n ip.only"}
+{"nl": "check if Jenkins is exposed on ci.server", "command": "nmap -p 8080,50000 ci.server"}
+{"nl": "run default scripts with timing template polite on slow.host", "command": "nmap -sC -T3 slow.host"}
+{"nl": "scan common IoT ports on smart.device", "command": "nmap -p 80,443,554,8080,8883 smart.device"}
+{"nl": "detect OS and uptime on uptime.check", "command": "nmap -O --osscan-guess uptime.check"}
+{"nl": "fast scan entire class C network 192.168.50.0/24", "command": "nmap -F 192.168.50.0/24"}
+{"nl": "run http favicon script for identification on web.id", "command": "nmap -p 80,443 --script http-favicon web.id"}
+{"nl": "SYN scan multiple ports with open only on multi.port", "command": "nmap -sS -p 22,80,443,3389 --open multi.port"}
+{"nl": "check RabbitMQ management port on queue.server", "command": "nmap -p 15672 queue.server"}
+{"nl": "aggressive scan with badsum for testing on badsum.test", "command": "nmap -A --badsum badsum.test"}
+{"nl": "scan for open SIP ports on voip.pbx", "command": "nmap -p 5060-5061 voip.pbx"}
+{"nl": "verbose full port scan with version on complete.scan", "command": "nmap -v -p- -sV complete.scan"}
+{"nl": "run ssh scripts for algorithm info on ssh.host", "command": "nmap -p 22 --script ssh2-enum-algos,ssh-hostkey ssh.host"}
+{"nl": "quick host discovery using ACK ping on ack.ping", "command": "nmap -PA ack.ping"}
+{"nl": "scan top 100 ports with reason output on reason.show", "command": "nmap --top-ports 100 --reason reason.show"}
+{"nl": "detect services on non-standard high ports for high.ports", "command": "nmap -sV -p 10000-20000 high.ports"}
+{"nl": "perform Xmas scan with verbose on xmas.verbose", "command": "nmap -v -sX xmas.verbose"}
+{"nl": "run mysql info scripts on database mysql.db", "command": "nmap -p 3306 --script mysql-info,mysql-variables mysql.db"}
+{"nl": "fast aggressive scan on multiple domains site1.com site2.com", "command": "nmap -A -F site1.com site2.com"}
+{"nl": "check if Cassandra is open on bigdata.node", "command": "nmap -p 9042,7000 bigdata.node"}
+{"nl": "scan without port scan just host discovery on hosts.only", "command": "nmap -sn hosts.only"}
+{"nl": "run http security headers script on secure.web", "command": "nmap -p 80,443 --script http-security-headers secure.web"}
+{"nl": "verbose SYN scan with timing insane on fast.connection", "command": "nmap -v -sS -T5 fast.connection"}
+{"nl": "scan for open CouchDB ports on nosql.server", "command": "nmap -p 5984 couchdb.server"}
+{"nl": "aggressive scan with MTU fragmentation on frag.mtu", "command": "nmap -A -f --mtu 24 frag.mtu"}
+{"nl": "check common printer ports on printer.device", "command": "nmap -p 9100,515,631 printer.device"}
+{"nl": "run default scripts only on open ports for efficient.scan", "command": "nmap -sC --open efficient.scan"}
+{"nl": "detect version light on top ports for light.version", "command": "nmap --top-ports 100 --version-light light.version"}
+{"nl": "scan subnet using list of targets from file targets.txt", "command": "nmap -iL targets.txt"}
+{"nl": "perform null scan with decoys on decoy.null", "command": "nmap -sN -D RND:5 decoy.null"}
+{"nl": "run dns zone transfer script on dns.server", "command": "nmap --script dns-zone-transfer dns.server"}
+{"nl": "quick scan with OS detection on os.quick", "command": "nmap -F -O os.quick"}
+{"nl": "check if Zabbix is exposed on monitoring.host", "command": "nmap -p 10050,10051 monitoring.host"}
+{"nl": "verbose UDP scan on selected ports for udp.selected", "command": "nmap -v -sU -p 53,123,161 udp.selected"}
+{"nl": "aggressive scan with traceroute and scripts on trace.script", "command": "nmap -A --traceroute --script default trace.script"}
+{"nl": "scan for open Prometheus ports on metrics.server", "command": "nmap -p 9090 prometheus.server"}
+{"nl": "run http directory enumeration on web.enum", "command": "nmap -p 80,443 --script http-enum web.enum"}
+{"nl": "fast scan skipping host discovery on assumed.up", "command": "nmap -F -Pn assumed.up"}
+{"nl": "detect services on common admin ports for admin.check", "command": "nmap -sV -p 8080,8443,8888,9000 admin.check"}
+{"nl": "perform FIN scan with verbose output on fin.verbose", "command": "nmap -v -sF fin.verbose"}
+{"nl": "run smb os discovery on windows.smb", "command": "nmap --script smb-os-discovery windows.smb"}
+{"nl": "scan top 500 ports with open filter on open.top", "command": "nmap --top-ports 500 --open open.top"}
+{"nl": "check if Grafana is running on dashboard.host", "command": "nmap -p 3000 dashboard.host"}
+{"nl": "verbose aggressive scan with data length on data.len", "command": "nmap -v -A --data-length 50 data.len"}
+{"nl": "scan for open Modbus ports on industrial.device", "command": "nmap -p 502 industrial.device"}
+{"nl": "run default scripts with version detection on default.version", "command": "nmap -sC -sV default.version"}
+{"nl": "quick SYN scan on range 192.168.10.1-100", "command": "nmap -sS 192.168.10.1-100"}
+{"nl": "detect open ports for common backup services on backup.server", "command": "nmap -p 873,445,22 backup.server"}
+{"nl": "aggressive scan using IPv6 on ipv6.target", "command": "nmap -6 -A ipv6.target"}
+{"nl": "run http wordpress enumeration on wp.site", "command": "nmap -p 80,443 --script http-wordpress-enum wp.site"}
+{"nl": "scan without DNS and without ping on strict.host", "command": "nmap -n -Pn strict.host"}
+{"nl": "check if Kibana is exposed on log.server", "command": "nmap -p 5601 log.server"}
+{"nl": "verbose full scan with timing sneaky on sneaky.scan", "command": "nmap -v -p- -T1 sneaky.scan"}
+{"nl": "run ssl cert script on encrypted.services", "command": "nmap --script ssl-cert encrypted.services"}
+{"nl": "fast scan top ports with reason on reason.fast", "command": "nmap --top-ports 100 --reason reason.fast"}
+{"nl": "scan for open BACnet ports on building.system", "command": "nmap -p 47808 building.system"}
+{"nl": "perform TCP connect scan with verbose on connect.verbose", "command": "nmap -v -sT connect.verbose"}
+{"nl": "run nmap service probes intensely on intense.probes", "command": "nmap -sV --version-intensity 9 intense.probes"}
+{"nl": "quick host discovery on small network 10.0.2.0/24", "command": "nmap -sn 10.0.2.0/24"}
+{"nl": "check common VPN ports on vpn.gateway", "command": "nmap -p 1194,1723,500,4500 vpn.gateway"}
+{"nl": "aggressive scan with spoofed MAC on spoof.mac", "command": "nmap -A --spoof-mac 0 spoof.mac"}
+{"nl": "run http git script for repo discovery on git.web", "command": "nmap --script http-git web.git"}
+{"nl": "scan selected ports aggressively on selected.aggressive", "command": "nmap -A -p 22,80,443,3306,5432 selected.aggressive"}
+{"nl": "detect open ports for common chat services on chat.server", "command": "nmap -p 5222,5269,5280 chat.server"}
+{"nl": "verbose Xmas scan on christmas.tree", "command": "nmap -v -sX christmas.tree"}
+{"nl": "run default scripts with open ports only on open.scripts", "command": "nmap -sC --open open.scripts"}
+{"nl": "fast version detection on all ports for version.all", "command": "nmap -p- -sV -T4 version.all"}
+{"nl": "check if Consul is running on service.discovery", "command": "nmap -p 8500,8600 service.discovery"}
+{"nl": "scan subnet excluding some hosts on exclude.scan", "command": "nmap 192.168.1.0/24 -exclude 192.168.1.1,192.168.1.254 exclude.scan"}
+{"nl": "run http iis scripts on windows.web", "command": "nmap -p 80,443 --script http-iis* windows.web"}
+{"nl": "aggressive scan with random target order on random.order", "command": "nmap -A --randomize-hosts random.order"}
+{"nl": "quick scan common ports with OS guess on os.guess", "command": "nmap -F --osscan-guess os.guess"}
+{"nl": "detect services on ports related to containers on container.host", "command": "nmap -sV -p 2375,2376,6443,10250 container.host"}
+{"nl": "perform idle scan with verbose on idle.verbose", "command": "nmap -v -sI zombie.host idle.verbose"}
+{"nl": "run banner script on all open ports for banners.all", "command": "nmap --script banner banners.all"}
+{"nl": "scan top 1000 ports slowly on polite.scan", "command": "nmap --top-ports 1000 -T2 polite.scan"}
+{"nl": "check if etcd is exposed on cluster.store", "command": "nmap -p 2379,2380 cluster.store"}
+{"nl": "verbose aggressive scan with traceroute on trace.aggressive", "command": "nmap -v -A --traceroute trace.aggressive"}
+{"nl": "run http php version script on php.site", "command": "nmap --script http-php-version php.site"}
+{"nl": "run http sitemap generator script on website.com", "command": "nmap -p 80,443 --script http-sitemap-generator website.com"}
+{"nl": "scan for open Redis ports on cache.system", "command": "nmap -p 6379 cache.system"}
+{"nl": "verbose SYN scan with open ports only on open.syn", "command": "nmap -v -sS --open open.syn"}
+{"nl": "check common streaming ports on media.server", "command": "nmap -p 1935,554,8554 media.server"}
+{"nl": "aggressive scan with IPv6 support on ipv6.aggressive", "command": "nmap -6 -A ipv6.aggressive"}
+{"nl": "run mysql users enumeration script on mysql.target", "command": "nmap -p 3306 --script mysql-enum mysql.target"}
+{"nl": "quick scan top 200 ports on office.network 192.168.20.0/24", "command": "nmap --top-ports 200 192.168.20.0/24"}
+{"nl": "detect OS with higher accuracy limit on accurate.os", "command": "nmap -O --osscan-limit accurate.os"}
+{"nl": "scan for open TeamSpeak ports on voice.server", "command": "nmap -p 9987,10011,30033 voice.server"}
+{"nl": "run ssh public key script on ssh.server", "command": "nmap -p 22 --script ssh-publickey ssh.server"}
+{"nl": "fast version scan skipping host discovery on up.host", "command": "nmap -F -sV -Pn up.host"}
+{"nl": "check if Node-RED is exposed on iot.device", "command": "nmap -p 1880 iot.device"}
+{"nl": "verbose full port scan slowly on careful.scan", "command": "nmap -v -p- -T2 careful.scan"}
+{"nl": "run http traceroute script on web.trace", "command": "nmap -p 80,443 --script http-traceroute web.trace"}
+{"nl": "scan common monitoring ports on nagios.host", "command": "nmap -p 5666,5667 nagios.host"}
+{"nl": "aggressive scan with spoofed source IP on spoof.ip", "command": "nmap -A -S fake.ip spoof.ip"}
+{"nl": "perform UDP scan on DNS and SNMP ports for udp.common", "command": "nmap -sU -p 53,161,162 udp.common"}
+{"nl": "run smb security mode script on smb.check", "command": "nmap --script smb-security-mode smb.check"}
+{"nl": "quick host discovery with ARP on local.lan", "command": "nmap -PR local.lan"}
+{"nl": "check if InfluxDB is open on timeseries.db", "command": "nmap -p 8086 influxdb.host"}
+{"nl": "verbose aggressive scan with packet trace on trace.packets", "command": "nmap -v -A --packet-trace trace.packets"}
+{"nl": "scan for open Minecraft query ports on game.server", "command": "nmap -p 25565 game.server"}
+{"nl": "run default scripts with reason output on reason.scripts", "command": "nmap -sC --reason reason.scripts"}
+{"nl": "fast scan common ports on multiple targets target1 target2", "command": "nmap -F target1 target2"}
+{"nl": "detect services on high ports 49152-65535 for ephemeral.ports", "command": "nmap -sV -p 49152-65535 ephemeral.ports"}
+{"nl": "perform ACK scan with verbose on ack.verbose", "command": "nmap -v -sA ack.verbose"}
+{"nl": "run http user agent enumeration on web.agent", "command": "nmap -p 80,443 --script http-useragent-tester web.agent"}
+{"nl": "scan subnet 10.50.0.0/24 excluding router and printer", "command": "nmap 10.50.0.0/24 --exclude 10.50.0.1,10.50.0.10"}
+{"nl": "check if OpenVPN is running on vpn.server", "command": "nmap -p 1194 openvpn.server"}
+{"nl": "aggressive scan with random data on random.data", "command": "nmap -A --data-random random.data"}
+{"nl": "run dns recursion check script on dns.recursion", "command": "nmap --script dns-recursion dns.recursion"}
+{"nl": "quick SYN scan with top ports on quick.syn", "command": "nmap -sS --top-ports 100 quick.syn"}
+{"nl": "scan for open Docker registry ports on registry.host", "command": "nmap -p 5000 registry.host"}
+{"nl": "verbose version detection with all intensity on intense.version", "command": "nmap -v -sV --version-all intense.version"}
+{"nl": "run http auth finder script on auth.web", "command": "nmap -p 80,443 --script http-auth-finder auth.web"}
+{"nl": "check common SCADA ports on industrial.control", "command": "nmap -p 502,2404,44818 industrial.control"}
+{"nl": "fast aggressive scan without DNS on no.dns.aggressive", "command": "nmap -A -n -F no.dns.aggressive"}
+{"nl": "scan for open Asterisk ports on pbx.asterisk", "command": "nmap -p 5060,5061,10000-20000 pbx.asterisk"}
+{"nl": "run smb protocols script on smb.protocols", "command": "nmap --script smb-protocols smb.protocols"}
+{"nl": "host discovery using TCP connect ping on connect.ping", "command": "nmap -PT connect.ping"}
+{"nl": "check if RabbitMQ is exposed on message.broker", "command": "nmap -p 5672,15672 message.broker"}
+{"nl": "verbose full scan with stats updates on stats.scan", "command": "nmap -v -p- --stats-every 5s stats.scan"}
+{"nl": "run http headers script on header.check", "command": "nmap -p 80,443 --script http-headers header.check"}
+{"nl": "scan top 1000 ports with open filter on open.1000", "command": "nmap --top-ports 1000 --open open.1000"}
+{"nl": "detect OS on Windows-like hosts with guess on windows.guess", "command": "nmap -O --osscan-guess windows.guess"}
+{"nl": "perform Maimon scan on firewall.test", "command": "nmap -sM firewall.test"}
+{"nl": "run mysql databases script on mysql.dbs", "command": "nmap -p 3306 --script mysql-databases mysql.dbs"}
+{"nl": "quick scan entire B class network 172.20.0.0/16", "command": "nmap -F 172.20.0.0/16"}
+{"nl": "check if Plex is running on media.center", "command": "nmap -p 32400 plex.server"}
+{"nl": "aggressive scan with decoys and fragments on evade.all", "command": "nmap -A -D RND:10 -f evade.all"}
+{"nl": "run http file upload tester script on upload.test", "command": "nmap -p 80,443 --script http-upload-tester upload.test"}
+{"nl": "scan common database backup ports on db.backup", "command": "nmap -p 3307,5433 db.backup"}
+{"nl": "verbose UDP scan with top ports on udp.top", "command": "nmap -v -sU --top-ports 100 udp.top"}
+{"nl": "run ssl date script on ssl.date", "command": "nmap --script ssl-date ssl.date"}
+{"nl": "fast host discovery on campus network 10.100.0.0/18", "command": "nmap -sn 10.100.0.0/18"}
+{"nl": "check if SonarQube is exposed on code.quality", "command": "nmap -p 9000 sonarqube.host"}
+{"nl": "scan selected ports with reason and verbose on detailed.ports", "command": "nmap -v -p 22,80,443 --reason detailed.ports"}
+{"nl": "run http jsonp detection script on api.jsonp", "command": "nmap --script http-jsonp-detection api.jsonp"}
+{"nl": "aggressive scan on localhost with all options on local.full", "command": "nmap -A -v 127.0.0.1"}
+{"nl": "scan for open Mumble ports on voice.mumble", "command": "nmap -p 64738 mumble.server"}
+{"nl": "run default scripts with version light on light.scripts", "command": "nmap -sC --version-light light.scripts"}
+{"nl": "quick scan excluding known hosts on exclude.quick", "command": "nmap -F --exclude 192.168.1.1 exclude.quick"}
+{"nl": "detect services on custom application ports for app.custom", "command": "nmap -sV -p 8081,9090,7070 app.custom"}
+{"nl": "perform window scan with verbose on window.verbose", "command": "nmap -v -sW window.verbose"}
+{"nl": "run smb brute script carefully on smb.brute", "command": "nmap --script smb-brute smb.brute"}
+{"nl": "scan top 50 ports aggressively on aggressive.top", "command": "nmap -A --top-ports 50 aggressive.top"}
+{"nl": "check if Vault is running on secrets.manager", "command": "nmap -p 8200 vault.host"}
+{"nl": "verbose SYN scan with source port evasion on evade.port", "command": "nmap -v -sS -g 80 evade.port"}
+{"nl": "run http csrf detection script on csrf.check", "command": "nmap -p 80,443 --script http-csrf csrf.check"}
+{"nl": "fast version scan on subnet 192.168.100.0/24", "command": "nmap -F -sV 192.168.100.0/24"}
+{"nl": "scan for open RDP and VNC on remote.desktop", "command": "nmap -p 3389,5900 remote.desktop"}
+{"nl": "aggressive scan with bad checksums on bad.checksum", "command": "nmap -A --badsum bad.checksum"}
+{"nl": "run dns cache snoop script on dns.snoop", "command": "nmap --script dns-cache-snoop dns.snoop"}
+{"nl": "quick ping scan with verbose on verbose.ping", "command": "nmap -v -sn verbose.ping"}
+{"nl": "check if Traefik dashboard is exposed on reverse.proxy", "command": "nmap -p 8080 traefik.host"}
+{"nl": "verbose full port scan with open only on open.full", "command": "nmap -v -p- --open open.full"}
+{"nl": "run http xssed script on xss.check", "command": "nmap -p 80,443 --script http-xssed xss.check"}
+{"nl": "scan common web app ports aggressively on webapp.aggressive", "command": "nmap -A -p 3000,4000,5000,8000 webapp.aggressive"}
+{"nl": "detect OS without port scan on os.only", "command": "nmap -O -Pn os.only"}
+{"nl": "perform null scan with timing paranoid on paranoid.null", "command": "nmap -sN -T1 paranoid.null"}
+{"nl": "run mysql empty password script on mysql.empty", "command": "nmap -p 3306 --script mysql-empty-password mysql.empty"}
+{"nl": "fast scan top ports with OS detection on os.top", "command": "nmap --top-ports 100 -O os.top"}
+{"nl": "check if Home Assistant is running on smart.home", "command": "nmap -p 8123 homeassistant.local"}
+{"nl": "aggressive scan with MTU and decoys on advanced.evade", "command": "nmap -A --mtu 16 -D RND:5 advanced.evade"}
+{"nl": "run http slowloris check script on dos.test", "command": "nmap --script http-slowloris-check dos.test"}
+{"nl": "scan for open FTP anonymous ports on ftp.anon", "command": "nmap -p 21 --script ftp-anon ftp.anon"}
+{"nl": "verbose UDP scan on NTP and DNS for udp.services", "command": "nmap -v -sU -p 53,123 udp.services"}
+{"nl": "run ssl known vulnerabilities script on ssl.vuln", "command": "nmap --script ssl-known-vulnerabilities ssl.vuln"}
+{"nl": "quick host discovery excluding file on exclude.discovery", "command": "nmap -sn --excludefile exclude.txt exclude.discovery"}
+{"nl": "check if Nextcloud is exposed on cloud.storage", "command": "nmap -p 80,443 nextcloud.host"}
+{"nl": "scan selected ports with packet trace on trace.selected", "command": "nmap -p 22,80,443 --packet-trace trace.selected"}
+{"nl": "run http malware scanner script on malware.check", "command": "nmap -p 80,443 --script http-malware-host malware.check"}
+{"nl": "aggressive scan on range 10.10.10.1-254", "command": "nmap -A 10.10.10.1-254"}
+{"nl": "detect version on common big data ports for bigdata.version", "command": "nmap -sV -p 8088,9000,2181 bigdata.version"}
+{"nl": "perform FIN scan with open ports only on open.fin", "command": "nmap -sF --open open.fin"}
+{"nl": "run smb vuln ms17-010 script on eternalblue.check", "command": "nmap --script smb-vuln-ms17-010 eternalblue.check"}
+{"nl": "fast scan with timing template normal on normal.speed", "command": "nmap -F -T3 normal.speed"}
+{"nl": "check if Pi-hole dashboard is open on adblock.local", "command": "nmap -p 80 pihole.local"}
+{"nl": "verbose aggressive scan with IPv6 on ipv6.verbose", "command": "nmap -v -A -6 ipv6.verbose"}
+{"nl": "run http config backup script on backup.config", "command": "nmap -p 80,443 --script http-config-backup backup.config"}
+{"nl": "run http open proxy detection script on proxy.check", "command": "nmap -p 80,8080,3128 --script http-open-proxy proxy.check"}
+{"nl": "scan for open Elasticsearch ports on search.cluster", "command": "nmap -p 9200,9300 elasticsearch.node"}
+{"nl": "verbose SYN scan with stats every minute on long.verbose", "command": "nmap -v -sS --stats-every 60s long.verbose"}
+{"nl": "check common email relay ports on mail.relay", "command": "nmap -p 25,587,465 mail.relay"}
+{"nl": "aggressive scan with version trace on version.trace", "command": "nmap -A --version-trace version.trace"}
+{"nl": "run mysql audit script on mysql.audit", "command": "nmap -p 3306 --script mysql-audit mysql.audit"}
+{"nl": "quick scan top 500 ports on datacenter network 10.200.0.0/22", "command": "nmap --top-ports 500 10.200.0.0/22"}
+{"nl": "detect OS with maximum accuracy on critical.host", "command": "nmap -O --osscan-limit --osscan-guess critical.host"}
+{"nl": "scan for open FreeSWITCH ports on voip.freeswitch", "command": "nmap -p 5060,5061,5080 freeswitch.server"}
+{"nl": "run ssh authentication methods script on ssh.auth", "command": "nmap -p 22 --script ssh-auth-methods ssh.auth"}
+{"nl": "fast aggressive scan on multiple IPs from file ips.txt", "command": "nmap -A -F -iL ips.txt"}
+{"nl": "check if Mosquitto MQTT broker is exposed on mqtt.broker", "command": "nmap -p 1883,8883 mqtt.local"}
+{"nl": "verbose full port scan with reason output on reason.full", "command": "nmap -v -p- --reason reason.full"}
+{"nl": "run http webdav scan script on webdav.check", "command": "nmap -p 80,443 --script http-webdav-scan webdav.check"}
+{"nl": "scan common camera ports on ipcam.device", "command": "nmap -p 80,554,8080,8554 ipcam.device"}
+{"nl": "aggressive scan with spoofed source port on spoof.port", "command": "nmap -A -g 53 spoof.port"}
+{"nl": "perform UDP scan on SIP and RTP range for voip.udp", "command": "nmap -sU -p 5060-5061,10000-20000 voip.udp"}
+{"nl": "run smb enumeration of shares script on shares.enum", "command": "nmap --script smb-enum-shares shares.enum"}
+{"nl": "host discovery using UDP ping on udp.ping", "command": "nmap -PU udp.ping"}
+{"nl": "check if TimescaleDB is open on postgres.extension", "command": "nmap -p 5432 timescale.host"}
+{"nl": "verbose version scan with packet trace on trace.version", "command": "nmap -v -sV --packet-trace trace.version"}
+{"nl": "scan for open Terraria ports on game.terraria", "command": "nmap -p 7777 terraria.server"}
+{"nl": "run default scripts aggressively on aggressive.scripts", "command": "nmap -A -sC aggressive.scripts"}
+{"nl": "fast scan common ports excluding file exclude.txt", "command": "nmap -F --excludefile exclude.txt"}
+{"nl": "detect services on ephemeral high ports range for high.services", "command": "nmap -sV -p 30000-50000 high.services"}
+{"nl": "perform window scan with open filter on open.window", "command": "nmap -sW --open open.window"}
+{"nl": "run http form brute script on login.form", "command": "nmap -p 80,443 --script http-form-brute login.form"}
+{"nl": "scan subnet 172.30.0.0/24 with random host order", "command": "nmap --randomize-hosts 172.30.0.0/24"}
+{"nl": "check if Nomad is running on orchestration.node", "command": "nmap -p 4646,8500 nomad.server"}
+{"nl": "aggressive scan with extra data length on extra.data", "command": "nmap -A --data-length 100 extra.data"}
+{"nl": "run dns brute script on domain.brute", "command": "nmap --script dns-brute domain.brute"}
+{"nl": "quick version scan on top ports for quick.version", "command": "nmap --top-ports 200 -sV quick.version"}
+{"nl": "scan for open registry ports on docker.registry", "command": "nmap -p 5000-5001 registry.local"}
+{"nl": "verbose aggressive scan with all timing on insane.all", "command": "nmap -v -A -T5 insane.all"}
+{"nl": "run http authentication finder on basic.auth", "command": "nmap -p 80,443 --script http-auth basic.auth"}
+{"nl": "check common PLC ports on automation.system", "command": "nmap -p 102,44818 automation.system"}
+{"nl": "fast scan without host discovery on assumed.live", "command": "nmap -F -Pn assumed.live"}
+{"nl": "scan for open Kamailio ports on sip.proxy", "command": "nmap -p 5060,5061 sip.proxy"}
+{"nl": "run smb system info script on smb.info", "command": "nmap --script smb-system-info smb.info"}
+{"nl": "host discovery using SYN ping on port 80", "command": "nmap -PS80 host.discovery"}
+{"nl": "check if AMQP is exposed on rabbitmq.alt", "command": "nmap -p 5671,5672 amqp.server"}
+{"nl": "verbose scan with min parallelism on slow.parallel", "command": "nmap -v --min-parallelism 10 slow.parallel"}
+{"nl": "run http server header enumeration on server.headers", "command": "nmap -p 80,443 --script http-server-header server.headers"}
+{"nl": "scan top 2000 ports with open only on open.2000", "command": "nmap --top-ports 2000 --open open.2000"}
+{"nl": "detect OS aggressively with guess on guess.aggressive", "command": "nmap -A -O --osscan-guess guess.aggressive"}
+{"nl": "perform idle scan with decoys on advanced.idle", "command": "nmap -sI zombie.host -D RND:5 advanced.idle"}
+{"nl": "run mysql query script on mysql.query", "command": "nmap -p 3306 --script mysql-query mysql.query"}
+{"nl": "quick scan large network 192.168.0.0/16", "command": "nmap -F 192.168.0.0/16"}
+{"nl": "check if Sonarr is running on media.manager", "command": "nmap -p 8989 sonarr.local"}
+{"nl": "aggressive scan with fragments and badsum on evade.max", "command": "nmap -A -f --badsum evade.max"}
+{"nl": "run http backup finder script on backup.finder", "command": "nmap -p 80,443 --script http-backup-finder backup.finder"}
+{"nl": "scan common alternative web ports on alt.web", "command": "nmap -p 81,8000,8081,8888 alt.web"}
+{"nl": "verbose UDP scan on common ports for udp.common.verbose", "command": "nmap -v -sU --top-ports 50 udp.common.verbose"}
+{"nl": "run ssl heartbleed script on heartbleed.check", "command": "nmap --script ssl-heartbleed heartbleed.check"}
+{"nl": "fast host discovery with list input from hosts.txt", "command": "nmap -sn -iL hosts.txt"}
+{"nl": "check if Jellyfin is exposed on media.stream", "command": "nmap -p 8096 jellyfin.local"}
+{"nl": "scan selected ports with version trace on trace.ports", "command": "nmap -p 22,80,443 -sV --version-trace trace.ports"}
+{"nl": "run http vulnerable files script on vuln.files", "command": "nmap -p 80,443 --script http-vuln* vuln.files"}
+{"nl": "aggressive scan on small range 10.1.1.1-50", "command": "nmap -A 10.1.1.1-50"}
+{"nl": "detect version on Hadoop ports for hadoop.version", "command": "nmap -sV -p 8020,9000,50070 hadoop.version"}
+{"nl": "perform Xmas scan with reason output on reason.xmas", "command": "nmap -sX --reason reason.xmas"}
+{"nl": "run smb vuln webexec script on webexec.check", "command": "nmap --script smb-vuln-webexec webexec.check"}
+{"nl": "fast scan with normal timing on balanced.scan", "command": "nmap -F -T3 balanced.scan"}
+{"nl": "check if AdGuard Home is open on dns.blocker", "command": "nmap -p 80,3000 adguard.local"}
+{"nl": "verbose aggressive scan skipping DNS on no.dns.verbose", "command": "nmap -v -A -n no.dns.verbose"}
+{"nl": "run http directory brute script on dir.brute", "command": "nmap -p 80,443 --script http-brute dir.brute"}
+{"nl": "scan common container orchestration ports on k8s.alt", "command": "nmap -p 10250,10255,6443 k8s.alt"}
+{"nl": "detect services lightly on top ports for light.services", "command": "nmap --top-ports 100 --version-light light.services"}
+{"nl": "perform null scan with paranoid timing on stealth.max", "command": "nmap -sN -T1 stealth.max"}
+{"nl": "run mysql brute force script on mysql.brute", "command": "nmap -p 3306 --script mysql-brute mysql.brute"}
+{"nl": "fast scan top ports with version on version.top", "command": "nmap --top-ports 300 -sV version.top"}
+{"nl": "check if Domoticz is running on home.automation", "command": "nmap -p 8080 domoticz.local"}
+{"nl": "aggressive scan with custom MTU and spoof MAC on advanced.spoof", "command": "nmap -A --mtu 32 --spoof-mac Cisco advanced.spoof"}
+{"nl": "run http grep script for emails on email.grep", "command": "nmap -p 80,443 --script http-grep --script-args http-grep.query=email email.grep"}
+{"nl": "scan for open anonymous FTP with script on ftp.full", "command": "nmap -p 21 --script ftp-anon,ftp-bounce ftp.full"}
+{"nl": "verbose full scan with min rate on rate.control", "command": "nmap -v -p- --min-rate 100 rate.control"}
+{"nl": "run ssl poodle vulnerability script on poodle.check", "command": "nmap --script ssl-poodle poodle.check"}
+{"nl": "quick host discovery on whole subnet with ARP", "command": "nmap -sn -PR 192.168.50.0/24"}
+{"nl": "check if Radarr is exposed on movie.manager", "command": "nmap -p 7878 radarr.local"}
+{"nl": "scan common ports with open and reason on detailed.open", "command": "nmap -F --open --reason detailed.open"}
+{"nl": "run http insecure cookie script on cookie.check", "command": "nmap -p 80,443 --script http-cookie-flags cookie.check"}
+{"nl": "aggressive scan on cloud VM public IP", "command": "nmap -A cloud.public.ip"}
+{"nl": "detect version on messaging ports for messaging.version", "command": "nmap -sV -p 5222,5269,5280,3478 messaging.version"}
+{"nl": "perform FIN scan with packet trace on trace.fin", "command": "nmap -sF --packet-trace trace.fin"}
+{"nl": "run smb doublepulsar check script on doublepulsar.check", "command": "nmap --script smb-double-pulsar-backdoor doublepulsar.check"}
+{"nl": "fast scan with aggressive timing on fast.aggressive", "command": "nmap -F -T4 fast.aggressive"}
+{"nl": "check if Unifi controller is open on network.manager", "command": "nmap -p 8080,8443 unifi.controller"}
+{"nl": "verbose SYN scan with max parallelism on parallel.max", "command": "nmap -v -sS --max-parallelism 100 parallel.max"}
+{"nl": "run http passwd file detection script on passwd.find", "command": "nmap -p 80,443 --script http-passwd passwd.find"}
+{"nl": "scan for open NFS ports with mount info on nfs.mount", "command": "nmap -p 111,2049 --script nfs-showmount nfs.mount"}
+{"nl": "detect OS on embedded devices with light probes", "command": "nmap -O --version-light embedded.device"}
+{"nl": "perform Maimon scan with decoys on decoy.maimon", "command": "nmap -sM -D RND:8 decoy.maimon"}
+{"nl": "run mysql info and users script on mysql.full", "command": "nmap -p 3306 --script mysql-info,mysql-users mysql.full"}
+{"nl": "quick scan top 1000 ports excluding known on filtered.scan", "command": "nmap --top-ports 1000 --exclude known.host filtered.scan"}
+{"nl": "check if Lidarr is running on music.manager", "command": "nmap -p 8686 lidarr.local"}
+{"nl": "aggressive scan with all evasion techniques on evade.full", "command": "nmap -A -f -D RND:10 -g 53 --data-length 20 evade.full"}
+{"nl": "run http phpMyAdmin detection script on phpmyadmin.check", "command": "nmap -p 80,443 --script http-phpmyadmin-dir-traversal phpmyadmin.check"}
+{"nl": "scan common alternative SSH ports on ssh.alt", "command": "nmap -p 2222,22022 ssh.alt"}
+{"nl": "verbose UDP scan with reason on udp.reason", "command": "nmap -v -sU --top-ports 20 --reason udp.reason"}
+{"nl": "run ssl dhe weak check script on dhe.weak", "command": "nmap --script ssl-dh-params dhe.weak"}
+{"nl": "fast version scan on large subnet 10.0.0.0/8", "command": "nmap -F -sV 10.0.0.0/8"}
+{"nl": "check if Proxmox web interface is exposed on hypervisor.host", "command": "nmap -p 8006 proxmox.local"}
+{"nl": "scan selected ports aggressively with open only on aggressive.selected", "command": "nmap -A -p 80,443,22,3389 --open aggressive.selected"}
+{"nl": "run http apcu panel detection script on cache.panel", "command": "nmap -p 80,443 --script http-apcu-cache cache.panel"}
+{"nl": "scan for open Memcached ports on cache.mem", "command": "nmap -p 11211 memcached.server"}
+{"nl": "verbose aggressive scan with max rate on fast.max", "command": "nmap -v -A --max-rate 1000 fast.max"}
+{"nl": "check common NAS management ports on storage.nas", "command": "nmap -p 80,443,5000,8080 nas.device"}
+{"nl": "aggressive scan with version all and open only on detailed.open.aggressive", "command": "nmap -A -sV --version-all --open detailed.open.aggressive"}
+{"nl": "run postgresql info script on postgres.info", "command": "nmap -p 5432 --script pgsql-brute,postgresql-info postgres.info"}
+{"nl": "quick scan top 1000 ports on enterprise network 172.16.0.0/20", "command": "nmap --top-ports 1000 172.16.0.0/20"}
+{"nl": "detect OS lightly on many hosts for quick.os", "command": "nmap -O --version-light --top-ports 100 quick.os"}
+{"nl": "scan for open Rust game server ports on rust.server", "command": "nmap -p 28015,28016 rust.server"}
+{"nl": "run ssh key exchange algorithms script on ssh.kex", "command": "nmap -p 22 --script ssh2-enum-algos ssh.kex"}
+{"nl": "fast scan with open ports and reason on reason.fast.open", "command": "nmap -F --open --reason reason.fast.open"}
+{"nl": "check if Zigbee2MQTT is exposed on mqtt.zigbee", "command": "nmap -p 8080 zigbee2mqtt.local"}
+{"nl": "verbose full port scan with insane timing on insane.full", "command": "nmap -v -p- -T5 insane.full"}
+{"nl": "run http laravel vulnerabilities script on laravel.check", "command": "nmap -p 80,443 --script http-laravel-vulnerabilities laravel.check"}
+{"nl": "scan common printer management ports on printer.admin", "command": "nmap -p 631,9100,515 printer.admin"}
+{"nl": "aggressive scan with custom source address on source.spoof", "command": "nmap -A -S 1.2.3.4 source.spoof"}
+{"nl": "perform UDP scan on common gaming ports for game.udp", "command": "nmap -sU -p 27015,7777,25565 game.udp"}
+{"nl": "run smb enumeration of users script on users.enum", "command": "nmap --script smb-enum-users users.enum"}
+{"nl": "host discovery using multiple ping methods on multi.ping", "command": "nmap -PE -PP -PS80 -PA443 multi.ping"}
+{"nl": "check if ClickHouse is open on analytics.db", "command": "nmap -p 8123,9000 clickhouse.server"}
+{"nl": "verbose script scan with default scripts on script.verbose", "command": "nmap -v -sC script.verbose"}
+{"nl": "scan for open ARK survival ports on ark.server", "command": "nmap -p 7777,7778,27015 ark.server"}
+{"nl": "run default scripts with stats every 30 seconds on progress.show", "command": "nmap -sC --stats-every 30s progress.show"}
+{"nl": "fast scan multiple subnets at once 10.10.10.0/24 10.10.20.0/24", "command": "nmap -F 10.10.10.0/24 10.10.20.0/24"}
+{"nl": "detect services on ports above 50000 for custom.apps", "command": "nmap -sV -p 50000-60000 custom.apps"}
+{"nl": "perform ACK scan with reason on firewall.rules", "command": "nmap -sA --reason firewall.rules"}
+{"nl": "run http drupal enumeration script on drupal.site", "command": "nmap -p 80,443 --script http-drupal-enum drupal.site"}
+{"nl": "scan large range with randomized order on random.large", "command": "nmap --randomize-hosts 192.168.1.1-255 random.large"}
+{"nl": "check if Consul UI is running on service.consul", "command": "nmap -p 8500 consul.local"}
+{"nl": "aggressive scan with fragmented decoys on frag.decoy", "command": "nmap -A -f -D RND:15 frag.decoy"}
+{"nl": "run dns nsec enumeration script on dns.nsec", "command": "nmap --script dns-nsec-enum dns.nsec"}
+{"nl": "quick aggressive scan on top ports for quick.aggressive", "command": "nmap -A --top-ports 200 quick.aggressive"}
+{"nl": "scan for open private Docker ports on docker.private", "command": "nmap -p 2375 docker.private"}
+{"nl": "verbose version detection with trace on trace.intense", "command": "nmap -v -sV --version-trace trace.intense"}
+{"nl": "run http joomla brute script on joomla.login", "command": "nmap -p 80,443 --script http-joomla-brute joomla.login"}
+{"nl": "check common BACnet building automation ports on bacnet.building", "command": "nmap -p 47808-47823 bacnet.building"}
+{"nl": "fast scan skipping ping and DNS on direct.fast", "command": "nmap -F -Pn -n direct.fast"}
+{"nl": "scan for open OpenBSD PF firewall ports on bsd.firewall", "command": "nmap -p 80,443 openbsd.host"}
+{"nl": "run smb vuln conficker script on conficker.check", "command": "nmap --script smb-vuln-conficker conficker.check"}
+{"nl": "host discovery with TCP ACK ping on port 80", "command": "nmap -PA80 host.ack"}
+{"nl": "check if Pulsar message broker is exposed on pulsar.broker", "command": "nmap -p 6650,8080 pulsar.server"}
+{"nl": "verbose scan with high parallelism on parallel.high", "command": "nmap -v --max-parallelism 256 parallel.high"}
+{"nl": "run http phpmyadmin brute script on admin.brute", "command": "nmap -p 80,443 --script http-phpmyadmin-brute admin.brute"}
+{"nl": "scan top 3000 ports with open filter on comprehensive.open", "command": "nmap --top-ports 3000 --open comprehensive.open"}
+{"nl": "detect OS with aggressive guess on embedded.os", "command": "nmap -O --osscan-guess embedded.os"}
+{"nl": "perform idle scan with packet trace on trace.idle", "command": "nmap -sI zombie.host --packet-trace trace.idle"}
+{"nl": "run postgresql brute script on pg.brute", "command": "nmap -p 5432 --script pgsql-brute pg.brute"}
+{"nl": "quick scan very large network 10.0.0.0/12", "command": "nmap -F 10.0.0.0/12"}
+{"nl": "check if Bazarr is running on subtitle.manager", "command": "nmap -p 6767 bazarr.local"}
+{"nl": "aggressive scan with all evasion options combined on ultimate.evade", "command": "nmap -A -f -D RND:20 -g 53 --data-length 30 --mtu 24 ultimate.evade"}
+{"nl": "run http wordpress users enumeration on wp.users", "command": "nmap -p 80,443 --script http-wordpress-users wp.users"}
+{"nl": "scan common high ports for custom services on high.custom", "command": "nmap -p 10000-20000 high.custom"}
+{"nl": "verbose UDP scan on SNMP and NTP for monitoring.udp", "command": "nmap -v -sU -p 161,162,123 monitoring.udp"}
+{"nl": "run ssl ccs injection script on ccs.check", "command": "nmap --script ssl-ccs-injection ccs.check"}
+{"nl": "fast host discovery using input from file targets.txt", "command": "nmap -sn -iL targets.txt"}
+{"nl": "check if Bookstack is exposed on wiki.bookstack", "command": "nmap -p 80,443 bookstack.local"}
+{"nl": "scan common ports with version and reason on detailed.version", "command": "nmap -F -sV --reason detailed.version"}
+{"nl": "run http struts vulnerabilities script on struts.check", "command": "nmap -p 80,443 --script http-vuln-cve2017-5638 struts.check"}
+{"nl": "aggressive scan on public facing server public.server", "command": "nmap -A public.server"}
+{"nl": "detect version on cloud storage ports for storage.version", "command": "nmap -sV -p 9000,9020,9042 storage.version"}
+{"nl": "perform Xmas scan with open and verbose on verbose.xmas", "command": "nmap -v -sX --open verbose.xmas"}
+{"nl": "run smb vuln ms08-067 script on ms08067.check", "command": "nmap --script smb-vuln-ms08-067 ms08067.check"}
+{"nl": "fast scan with polite timing on polite.fast", "command": "nmap -F -T2 polite.fast"}
+{"nl": "check if Synology DSM is open on nas.synology", "command": "nmap -p 5000,5001 synology.local"}
+{"nl": "verbose aggressive scan with max retries on retry.max", "command": "nmap -v -A --max-retries 1 retry.max"}
+{"nl": "run http django debug check on django.debug", "command": "nmap -p 80,443 --script http-django-debug django.debug"}
+{"nl": "scan for open MongoDB with auth check on mongo.auth", "command": "nmap -p 27017 --script mongodb-info,mongodb-databases mongo.auth"}
+{"nl": "detect services on IoT common ports for iot.services", "command": "nmap -sV -p 80,443,8080,8883,554 iot.services"}
+{"nl": "perform null scan with max parallelism on parallel.null", "command": "nmap -sN --max-parallelism 200 parallel.null"}
+{"nl": "run postgresql databases script on pg.dbs", "command": "nmap -p 5432 --script postgresql-enum-databases pg.dbs"}
+{"nl": "fast scan top ports with OS and version on complete.top", "command": "nmap --top-ports 500 -O -sV complete.top"}
+{"nl": "check if Node-RED dashboard is running on flow.editor", "command": "nmap -p 1880 nodered.local"}
+{"nl": "aggressive scan with spoofed MAC and source IP on full.spoof", "command": "nmap -A --spoof-mac Apple -S 192.168.1.100 full.spoof"}
+{"nl": "run http tomcat manager script on tomcat.manager", "command": "nmap -p 8080 --script http-tomcat-manager tomcat.manager"}
+{"nl": "scan for open alternative MySQL ports on mysql.alt", "command": "nmap -p 3307,3308 mysql.alt"}
+{"nl": "verbose full scan with min hostgroup on group.control", "command": "nmap -v -p- --min-hostgroup 50 group.control"}
+{"nl": "run ssl enum ciphers with vulnerabilities on ssl.full", "command": "nmap --script ssl-enum-ciphers,ssl-known-vulnerabilities ssl.full"}
+{"nl": "quick scan entire local network 192.168.0.0/16", "command": "nmap -F 192.168.0.0/16"}
+{"nl": "check if QNAP NAS is exposed on storage.qnap", "command": "nmap -p 8080,443 qnap.local"}
+{"nl": "scan common web ports with open and verbose on web.detailed", "command": "nmap -v -p 80,443,8080,8443 --open web.detailed"}
+{"nl": "run http cold fusion vulnerabilities on coldfusion.check", "command": "nmap -p 80,443 --script http-coldfusion* coldfusion.check"}
+{"nl": "aggressive scan on virtual machine guest.vm", "command": "nmap -A guest.vm"}
+{"nl": "detect version on real-time communication ports for rtc.version", "command": "nmap -sV -p 3478,5004,10000-20000 rtc.version"}
+{"nl": "perform FIN scan with stats updates on progress.fin", "command": "nmap -sF --stats-every 10s progress.fin"}
+{"nl": "run smb vuln cve-2017-0144 script on eternalblue.full", "command": "nmap --script smb-vuln-ms17-010 eternalblue.full"}
+{"nl": "fast scan with sneaky timing on stealth.fast", "command": "nmap -F -T1 stealth.fast"}
+{"nl": "check if TrueNAS web interface is open on freenas.host", "command": "nmap -p 80,443 truenas.local"}
+{"nl": "verbose SYN scan with host timeout on timeout.control", "command": "nmap -v -sS --host-timeout 30s timeout.control"}
+{"nl": "run http rails vulnerabilities script on rails.check", "command": "nmap -p 80,443 --script http-vuln-rails* rails.check"}
+{"nl": "scan for open Redis with database info on redis.info", "command": "nmap -p 6379 --script redis-info redis.info"}
+{"nl": "detect OS and services on router device for router.full", "command": "nmap -O -sV -p- router.full"}
+{"nl": "perform window scan with decoys and fragments on evade.window", "command": "nmap -sW -D RND:10 -f evade.window"}
+{"nl": "run mongodb brute script on mongo.brute", "command": "nmap -p 27017 --script mongodb-brute mongo.brute"}
+{"nl": "quick scan top 2000 ports with open filter on large.open", "command": "nmap --top-ports 2000 --open large.open"}
+{"nl": "check if Homebridge is running on apple.homekit", "command": "nmap -p 51826 homebridge.local"}
+{"nl": "aggressive scan with all possible evasion techniques on max.evade", "command": "nmap -A -f -D RND:30 -g 80 --data-length 50 --mtu 16 --badsum max.evade"}
+{"nl": "run http git repository enumeration on git.repo", "command": "nmap -p 80,443 --script http-git git.repo"}
+{"nl": "scan common high-numbered ports for dev servers on dev.ports", "command": "nmap -p 3000,4000,5000,8000,8081,9000 dev.ports"}
+{"nl": "verbose UDP scan with packet trace on trace.udp", "command": "nmap -v -sU --top-ports 50 --packet-trace trace.udp"}
+{"nl": "run ssl ticketbleed vulnerability script on ticketbleed.check", "command": "nmap --script ssl-ticketbleed ticketbleed.check"}
+{"nl": "fast host discovery on multiple networks simultaneously", "command": "nmap -sn 10.0.0.0/24 192.168.1.0/24 172.16.0.0/24"}
+{"nl": "check if Portainer is exposed on docker.manager", "command": "nmap -p 9000,9443 portainer.local"}
+{"nl": "scan all ports with version detection and open only on complete.version", "command": "nmap -p- -sV --open complete.version"}
