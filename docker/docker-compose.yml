@@ -1,0 +1,206 @@
+version: '3.8'
+
+# NMAP-AI Docker Compose Configuration
+# Person 4's responsibility
+# 
+# Services:
+# 1. neo4j - Knowledge Graph database (from P1)
+# 2. api - FastAPI backend (shared by all)
+# 3. gradio - Demo UI (optional)
+
+services:
+  # ============================================================================
+  # Neo4j Knowledge Graph Database
+  # ============================================================================
+  neo4j:
+    image: neo4j:5.13-community
+    container_name: nmap-ai-neo4j
+    
+    ports:
+      - "7474:7474"  # HTTP browser interface
+      - "7687:7687"  # Bolt protocol
+    
+    environment:
+      # Authentication
+      - NEO4J_AUTH=neo4j/password123
+      
+      # Memory settings
+      - NEO4J_dbms_memory_heap_initial__size=512m
+      - NEO4J_dbms_memory_heap_max__size=1G
+      - NEO4J_dbms_memory_pagecache_size=512m
+      
+      # Security settings
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=apoc.*
+      
+      # Plugins
+      - NEO4J_PLUGINS=["apoc"]
+    
+    volumes:
+      # Persistent data
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_import:/var/lib/neo4j/import
+      
+      # Import scripts from P1
+      - ./data/kg:/import
+    
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    
+    networks:
+      - nmap-ai-network
+    
+    restart: unless-stopped
+
+  # ============================================================================
+  # FastAPI Backend
+  # ============================================================================
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PYTHON_VERSION=3.11
+    
+    container_name: nmap-ai-api
+    
+    ports:
+      - "8000:8000"
+    
+    environment:
+      # Neo4j connection
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=password123
+      
+      # Application settings
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=info
+      - ENVIRONMENT=development
+      
+      # API settings
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    
+    volumes:
+      # Hot reload for development
+      - ./agents:/app/agents
+      - ./api:/app/api
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./artifacts:/app/artifacts
+    
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    
+    command: >
+      uvicorn api.main:app 
+      --host 0.0.0.0 
+      --port 8000 
+      --reload 
+      --log-level info
+    
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    networks:
+      - nmap-ai-network
+    
+    restart: unless-stopped
+
+  # ============================================================================
+  # Gradio Demo UI (Optional)
+  # ============================================================================
+  gradio:
+    build:
+      context: .
+      dockerfile: Dockerfile.gradio
+    
+    container_name: nmap-ai-gradio
+    
+    ports:
+      - "7860:7860"
+    
+    environment:
+      - API_URL=http://api:8000
+      - GRADIO_SERVER_NAME=0.0.0.0
+      - GRADIO_SERVER_PORT=7860
+    
+    volumes:
+      - ./demo:/app/demo
+    
+    depends_on:
+      api:
+        condition: service_healthy
+    
+    command: python demo/gradio_app.py
+    
+    networks:
+      - nmap-ai-network
+    
+    restart: unless-stopped
+    
+    # Comment out this service if you don't need the UI
+    # profiles:
+    #   - demo
+
+# ============================================================================
+# Volumes
+# ============================================================================
+volumes:
+  neo4j_data:
+    driver: local
+  neo4j_logs:
+    driver: local
+  neo4j_import:
+    driver: local
+
+# ============================================================================
+# Networks
+# ============================================================================
+networks:
+  nmap-ai-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# ============================================================================
+# Usage Instructions
+# ============================================================================
+#
+# Start all services:
+#   docker-compose up -d
+#
+# Start only Neo4j and API (no Gradio):
+#   docker-compose up -d neo4j api
+#
+# View logs:
+#   docker-compose logs -f
+#   docker-compose logs -f api
+#
+# Stop all services:
+#   docker-compose down
+#
+# Stop and remove volumes (WARNING: deletes data):
+#   docker-compose down -v
+#
+# Rebuild images:
+#   docker-compose up -d --build
+#
+# Access services:
+#   Neo4j Browser: http://localhost:7474
+#   API Docs: http://localhost:8000/docs
+#   Gradio UI: http://localhost:7860
+#
+# ============================================================================
