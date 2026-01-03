@@ -416,3 +416,98 @@ def get_kg_client() -> Neo4jClient:
     if _kg_client is None:
         _kg_client = Neo4jClient()
     return _kg_client
+
+
+@dataclass
+class Port:
+    """Represents a port/service."""
+    number: int
+    service: str
+    protocol: str
+    description: str
+
+
+def get_options(
+    category: Optional[str] = None,
+    requires_root: Optional[bool] = None,
+    complexity: Optional[str] = None,
+    max_complexity: Optional[str] = None,
+    exclude_conflicts: Optional[List[str]] = None
+) -> List[NmapOption]:
+    """Get nmap options from Knowledge Graph."""
+    client = get_kg_client()
+    options = client.get_options(
+        requires_root=requires_root,
+        category=category,
+        exclude_conflicts=exclude_conflicts
+    )
+    
+    # Complexity filtering
+    complexity_map = {
+        'SCAN_TYPE': 'EASY',
+        'DISCOVERY': 'EASY',
+        'PORT_SPEC': 'EASY',
+        'SERVICE_DETECTION': 'MEDIUM',
+        'OS_DETECTION': 'MEDIUM',
+        'TIMING': 'MEDIUM',
+        'SCRIPTING': 'HARD',
+        'AGGRESSIVE': 'HARD',
+        'MISC': 'EASY',
+        'OUTPUT': 'EASY',
+        'HOST_DISCOVERY': 'MEDIUM'
+    }
+    
+    if complexity:
+        options = [o for o in options if complexity_map.get(o.category, 'MEDIUM') == complexity]
+    
+    if max_complexity:
+        level_order = {'EASY': 0, 'MEDIUM': 1, 'HARD': 2}
+        max_level = level_order.get(max_complexity, 2)
+        options = [
+            o for o in options 
+            if level_order.get(complexity_map.get(o.category, 'MEDIUM'), 1) <= max_level
+        ]
+    
+    return options
+
+
+def get_conflicts(option: str) -> List[str]:
+    """Get list of options that conflict with the given option."""
+    client = get_kg_client()
+    return client.get_conflicts(option)
+
+
+def get_port_info(port: Optional[int] = None, service: Optional[str] = None) -> Port:
+    """Get port information by number or service name."""
+    PORTS = {
+        21: Port(21, "FTP", "TCP", "File Transfer Protocol"),
+        22: Port(22, "SSH", "TCP", "Secure Shell"),
+        23: Port(23, "Telnet", "TCP", "Telnet"),
+        25: Port(25, "SMTP", "TCP", "Simple Mail Transfer Protocol"),
+        53: Port(53, "DNS", "TCP/UDP", "Domain Name System"),
+        80: Port(80, "HTTP", "TCP", "Hypertext Transfer Protocol"),
+        443: Port(443, "HTTPS", "TCP", "HTTP Secure"),
+        161: Port(161, "SNMP", "UDP", "Simple Network Management Protocol"),
+        3306: Port(3306, "MySQL", "TCP", "MySQL Database"),
+        3389: Port(3389, "RDP", "TCP", "Remote Desktop Protocol"),
+    }
+    
+    if port is not None:
+        if port in PORTS:
+            return PORTS[port]
+        raise ValueError(f"Port {port} not found")
+    
+    if service is not None:
+        service_upper = service.upper()
+        for p in PORTS.values():
+            if p.service.upper() == service_upper:
+                return p
+        raise ValueError(f"Service '{service}' not found")
+    
+    raise ValueError("Must provide either port or service")
+
+
+def validate_command_conflicts(flags: List[str]) -> Dict[str, List[str]]:
+    """Check for conflicts in a list of flags."""
+    client = get_kg_client()
+    return client.validate_command_conflicts(flags)
