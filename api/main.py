@@ -1,22 +1,33 @@
 """
 NMAP-AI FastAPI Application
+Main entry point for the API server.
 Main entry point for the REST API
 Person 4's API endpoints for validation
 """
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import sys
+from pathlib import Path
+
+# Add project root to path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
+from api.routers import comprehend
+
 import uvicorn
 
 # Create FastAPI app
 app = FastAPI(
     title="NMAP-AI API",
-    description="AI-powered Natural Language to Nmap Command Generator with Advanced Validation",
+    description="Autonomous Nmap Command Generator with Knowledge Graph RAG + AI-powered Natural Language to Nmap Command Generator with Advanced Validation",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
 )
 
+# Add CORS middleware
 # CORS middleware - allow all origins for development
 app.add_middleware(
     CORSMiddleware,
@@ -26,31 +37,45 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ============================================================================
-# Health Check Endpoints
-# ============================================================================
+# Include routers
+app.include_router(comprehend.router)
+
 
 @app.get("/")
 async def root():
-    """
-    Root endpoint - API status
-    
-    Returns basic API information
-    """
+    """Root endpoint with API information."""
     return {
-        "status": "online",
+        "name": "NMAP-AI API",
         "message": "NMAP-AI API is running",
         "version": "1.0.0",
+        "description": "Autonomous Nmap Command Generator",
+        "docs": "/docs",
         "endpoints": {
+            "comprehension": "/comprehend",
+            "health": "/comprehend/health",
             "docs": "/docs",
             "health": "/health",
             "validate": "/api/validate",
             "generate": "/api/generate"
         }
     }
+# ============================================================================
+# Health Check Endpoints
+# ============================================================================
 
 
 @app.get("/health")
+async def health():
+    """Global health check."""
+    return {
+        "status": "healthy",
+        "service": "nmap-ai-api"
+    }
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
 async def health_check():
     """
     Health check endpoint for Docker
