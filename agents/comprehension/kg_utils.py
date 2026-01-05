@@ -23,19 +23,24 @@ class NmapOption:
 class Neo4jClient:
     """Singleton client for Neo4j Knowledge Graph queries."""
     
-    _instance = None
+    # _instance = None
     
-    def __new__(cls):
-        if cls._instance is None:
-            cls._instance = super().__new__(cls)
-            cls._instance._initialized = False
-        return cls._instance
+    # def __new__(cls):
+    #     if cls._instance is None:
+    #         cls._instance = super().__new__(cls)
+    #         cls._instance._initialized = False
+    #     return cls._instance
     
-    def __init__(self):
-        if self._initialized:
-            return
+    # def __init__(self):
+    #     if self._initialized:
+    #         return
             
-        self._initialized = True
+    #     self._initialized = True
+    #     self.driver = None
+    #     self._connect()
+
+    def __init__(self):
+        """Initialize Neo4j client with current environment variables."""
         self.driver = None
         self._connect()
     
@@ -46,7 +51,7 @@ class Neo4jClient:
             
             uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
             user = os.getenv("NEO4J_USER", "neo4j")
-            password = os.getenv("NEO4J_PASSWORD", "password")
+            password = os.getenv("NEO4J_PASSWORD", "password123")
             
             self.driver = GraphDatabase.driver(uri, auth=(user, password))
             
@@ -408,14 +413,27 @@ class Neo4jClient:
 
 
 # Singleton instance
-_kg_client = None
+# _kg_client = None
+
+# def get_kg_client() -> Neo4jClient:
+#     """Get or create the KG client singleton."""
+#     global _kg_client
+#     if _kg_client is None:
+#         _kg_client = Neo4jClient()
+#     return _kg_client
+
 
 def get_kg_client() -> Neo4jClient:
-    """Get or create the KG client singleton."""
-    global _kg_client
-    if _kg_client is None:
-        _kg_client = Neo4jClient()
-    return _kg_client
+    """
+    Create a fresh Neo4j Knowledge Graph client.
+    
+    Creates a new client instance to ensure environment variables
+    are read fresh (important for testing with different configs).
+    
+    Returns:
+        Neo4jClient: Knowledge graph client instance
+    """
+    return Neo4jClient()
 
 
 @dataclass
@@ -511,3 +529,27 @@ def validate_command_conflicts(flags: List[str]) -> Dict[str, List[str]]:
     """Check for conflicts in a list of flags."""
     client = get_kg_client()
     return client.validate_command_conflicts(flags)
+
+
+
+
+
+
+# reasons why I changed the original code :
+# problems faced :
+# ### **❌ AVANT (avec double singleton):**
+# ```
+# 1er appel → Neo4jClient() → __new__ crée instance → __init__ lit env vars (password="password")
+#                             ↓
+#                          Instance cachée
+#                             ↓
+# 2e appel → Neo4jClient() → __new__ retourne instance cachée → __init__ skip (already initialized)
+#                             ↓
+#                     Toujours le vieux password!
+# ```
+
+# ### **✅ APRÈS (sans singleton):**
+# ```
+# Chaque appel → Neo4jClient() → __init__ lit env vars FRAIS
+#                                 ↓
+#                          Nouvelles credentials!
