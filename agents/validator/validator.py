@@ -15,6 +15,12 @@ from typing import Dict, Optional, Callable
 import sys
 import os
 
+try:
+    from agents.comprehension.classifier import get_classifier
+    CLASSIFIER_AVAILABLE = True
+except ImportError:
+    CLASSIFIER_AVAILABLE = False
+
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -222,6 +228,19 @@ class CommandValidator:
         
         result['suggestions'] = suggestions
         return result
+    
+    def get_complexity_from_nl(self, natural_language_query: str):
+        """Get complexity from natural language query (uses P1's classifier)"""
+        if not CLASSIFIER_AVAILABLE:
+            return None
+    
+        try:
+            classifier = get_classifier()
+            result = classifier.comprehend(natural_language_query)
+            return result.get('complexity')
+        except Exception as e:
+            print(f"Classifier error: {e}")
+            return None
 
 
 class ValidationPipeline:

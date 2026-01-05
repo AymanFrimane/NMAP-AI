@@ -79,9 +79,9 @@ class TestNeo4jVsFallback:
 class TestConflictDetectionWithNeo4j:
     """Test conflict detection using REAL Neo4j (not fallback)"""
     
-    def test_scan_type_conflict_with_neo4j(self):
+    def test_scan_type_conflict_with_neo4j(self, neo4j_client):
         """Test scan type conflict detection using Neo4j"""
-        kg = get_kg_client()
+        kg = neo4j_client
         
         # Ensure we're using Neo4j
         assert kg.driver is not None, "This test requires Neo4j to be running"
@@ -94,9 +94,9 @@ class TestConflictDetectionWithNeo4j:
         
         print(f"\n✅ Neo4j detected conflict: {msg}")
     
-    def test_ping_scan_port_conflict_with_neo4j(self):
+    def test_ping_scan_port_conflict_with_neo4j(self, neo4j_client):
         """Test -sn vs -p conflict using Neo4j"""
-        kg = get_kg_client()
+        kg = neo4j_client
         
         assert kg.driver is not None, "This test requires Neo4j"
         
@@ -107,9 +107,9 @@ class TestConflictDetectionWithNeo4j:
         
         print(f"\n✅ Neo4j detected conflict: {msg}")
     
-    def test_no_conflict_with_neo4j(self):
+    def test_no_conflict_with_neo4j(self, neo4j_client):
         """Test that valid commands pass with Neo4j"""
-        kg = get_kg_client()
+        kg = neo4j_client
         
         assert kg.driver is not None, "This test requires Neo4j"
         
@@ -123,9 +123,9 @@ class TestConflictDetectionWithNeo4j:
 class TestRootDetectionWithNeo4j:
     """Test root requirement detection using REAL Neo4j"""
     
-    def test_root_required_with_neo4j(self):
+    def test_root_required_with_neo4j(self, neo4j_client):
         """Test that -sS is detected as requiring root via Neo4j"""
-        kg = get_kg_client()
+        kg = neo4j_client
         
         assert kg.driver is not None, "This test requires Neo4j"
         
@@ -136,9 +136,9 @@ class TestRootDetectionWithNeo4j:
         
         print(f"\n✅ Neo4j detected root requirement: {flags}")
     
-    def test_no_root_required_with_neo4j(self):
+    def test_no_root_required_with_neo4j(self, neo4j_client):
         """Test that -sT does not require root via Neo4j"""
-        kg = get_kg_client()
+        kg = neo4j_client
         
         assert kg.driver is not None, "This test requires Neo4j"
         
@@ -149,9 +149,9 @@ class TestRootDetectionWithNeo4j:
         
         print(f"\n✅ Neo4j validated no root needed")
     
-    def test_multiple_root_flags_with_neo4j(self):
+    def test_multiple_root_flags_with_neo4j(self, neo4j_client):
         """Test detection of multiple root-required flags"""
-        kg = get_kg_client()
+        kg = neo4j_client
         
         assert kg.driver is not None, "This test requires Neo4j"
         
