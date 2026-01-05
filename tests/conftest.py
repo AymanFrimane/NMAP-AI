@@ -18,7 +18,7 @@ def pytest_configure(config):
 
 
 @pytest.fixture(scope="session", autouse=True)
-def neo4j_setup():
+def neo4j_client():
     """Ensure Neo4j client is properly initialized"""
     from agents.comprehension.kg_utils import get_kg_client
     
