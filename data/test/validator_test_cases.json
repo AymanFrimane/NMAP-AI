@@ -1,0 +1,314 @@
+[
+  {
+    "input": "Scan all ports Run default,vuln scripts on 192.168.0.0/16",
+    "output": "nmap -p- --script default,vuln 192.168.0.0/16"
+  },
+  {
+    "input": "Do a ping scan and traceroute on 10.0.0.0/28",
+    "output": "nmap -sn --traceroute 10.0.0.0/28"
+  },
+  {
+    "input": "Do a ping scan on 192.168.100.15",
+    "output": "nmap -sn 192.168.100.15"
+  },
+  {
+    "input": "Scan ports for HTTPS, RDP, Telnet Perform OS detection on 192.168.1.0/28",
+    "output": "nmap -O -p 23,443,3389 192.168.1.0/28"
+  },
+  {
+    "input": "Scan ports for FTP using TCP connect scan on 172.16.0.171",
+    "output": "nmap -sT -p 21 172.16.0.171"
+  },
+  {
+    "input": "Do a ping scan with faster timing on 192.168.0.32",
+    "output": "nmap -sn -T5 192.168.0.32"
+  },
+  {
+    "input": "Scan all ports on 192.168.0.0/28",
+    "output": "nmap -p- 192.168.0.0/28"
+  },
+  {
+    "input": "Scan ports for SNMP and traceroute on 192.168.0.156",
+    "output": "nmap --traceroute -p 161 192.168.0.156"
+  },
+  {
+    "input": "Scan all ports and version detection on 192.168.0.0/16",
+    "output": "nmap -p- -sV 192.168.0.0/16"
+  },
+  {
+    "input": "Do a ping scan and traceroute on 192.168.100.88",
+    "output": "nmap -sn --traceroute 192.168.100.88"
+  },
+  {
+    "input": "Scan ports for HTTP, MySQL and version detection on 10.0.0.0/28",
+    "output": "nmap -sV -p 80,3306 10.0.0.0/28"
+  },
+  {
+    "input": "Scan ports for SNMP with faster timing on 192.168.1.0/28",
+    "output": "nmap -T5 -p 161 192.168.1.0/28"
+  },
+  {
+    "input": "Scan ports for HTTP, FTP, MySQL with faster timing on 10.0.0.0/28",
+    "output": "nmap -T5 -p 21,80,3306 10.0.0.0/28"
+  },
+  {
+    "input": "Scan all ports using SYN scan on 172.16.0.15",
+    "output": "nmap -sS -p- 172.16.0.15"
+  },
+  {
+    "input": "Scan ports for MySQL Run discovery scripts on 192.168.100.0/24",
+    "output": "nmap --script discovery -p 3306 192.168.100.0/24"
+  },
+  {
+    "input": "Do a ping scan and traceroute on 172.16.0.101",
+    "output": "nmap -sn --traceroute 172.16.0.101"
+  },
+  {
+    "input": "Do a ping scan with faster timing on 192.168.100.0/28",
+    "output": "nmap -sn -T5 192.168.100.0/28"
+  },
+  {
+    "input": "Scan ports for HTTPS on 192.168.1.0/16",
+    "output": "nmap -p 443 192.168.1.0/16"
+  },
+  {
+    "input": "Scan ports for FTP, SMTP, DNS Run default,vuln scripts on 10.0.0.0/28",
+    "output": "nmap --script default,vuln -p 21,25,53 10.0.0.0/28"
+  },
+  {
+    "input": "Scan ports for SSH, SNMP and version detection on 192.168.100.0/16",
+    "output": "nmap -sV -p 22,161 192.168.100.0/16"
+  },
+  {
+    "input": "Scan ports for Telnet with faster timing on 10.0.0.0/24",
+    "output": "nmap -T5 -p 23 10.0.0.0/24"
+  },
+  {
+    "input": "Scan all ports and version detection on 192.168.1.0/16",
+    "output": "nmap -p- -sV 192.168.1.0/16"
+  },
+  {
+    "input": "Scan all ports and version detection on 192.168.1.0/28",
+    "output": "nmap -p- -sV 192.168.1.0/28"
+  },
+  {
+    "input": "Scan ports for SSH, HTTP, HTTPS, MySQL using SYN scan on 192.168.1.0/24",
+    "output": "nmap -sS -p 22,80,443,3306 192.168.1.0/24"
+  },
+  {
+    "input": "Scan all ports on 10.0.0.30",
+    "output": "nmap -p- 10.0.0.30"
+  },
+  {
+    "input": "Scan ports for HTTP on 192.168.0.0/24",
+    "output": "nmap -p 80 192.168.0.0/24"
+  },
+  {
+    "input": "Scan ports for DNS, RDP, SNMP, Telnet using IPv6 on 2001:db8::2066",
+    "output": "nmap -6 -p 23,53,161,3389 2001:db8::2066"
+  },
+  {
+    "input": "Scan all ports using SYN scan on 192.168.0.109",
+    "output": "nmap -sS -p- 192.168.0.109"
+  },
+  {
+    "input": "Scan all ports using UDP scan on 10.0.0.0/28",
+    "output": "nmap -sU -p- 10.0.0.0/28"
+  },
+  {
+    "input": "Scan ports for HTTPS, FTP using TCP connect scan on 192.168.1.200",
+    "output": "nmap -sT -p 21,443 192.168.1.200"
+  },
+  {
+    "input": "Scan ports for DNS, MySQL, Telnet using UDP scan on 10.0.0.0/16",
+    "output": "nmap -sU -p 23,53,3306 10.0.0.0/16"
+  },
+  {
+    "input": "Do a ping scan on 192.168.100.0/16",
+    "output": "nmap -sn 192.168.100.0/16"
+  },
+  {
+    "input": "Scan ports for DNS on 192.168.100.0/24",
+    "output": "nmap -p 53 192.168.100.0/24"
+  },
+  {
+    "input": "Scan ports for HTTP, SNMP using TCP connect scan Perform OS detection using IPv6 on 2001:db8::3256",
+    "output": "nmap -6 -sT -O -p 80,161 2001:db8::3256"
+  },
+  {
+    "input": "Scan ports for SSH, SNMP using SYN scan and version detection on 192.168.100.0/28",
+    "output": "nmap -sS -sV -p 22,161 192.168.100.0/28"
+  },
+  {
+    "input": "Scan ports for SSH, FTP Perform OS detection Run vuln scripts and traceroute on 192.168.0.0/28",
+    "output": "nmap -O --traceroute --script vuln -p 21,22 192.168.0.0/28"
+  },
+  {
+    "input": "Scan all ports using TCP connect scan and version detection on 192.168.0.0/28",
+    "output": "nmap -sT -p- -sV 192.168.0.0/28"
+  },
+  {
+    "input": "Scan all ports using SYN scan and traceroute on 172.16.0.246",
+    "output": "nmap -sS -p- --traceroute 172.16.0.246"
+  },
+  {
+    "input": "Scan ports for HTTP, SMTP and version detection with faster timing on 192.168.1.148",
+    "output": "nmap -sV -T5 -p 25,80 192.168.1.148"
+  },
+  {
+    "input": "Scan ports for HTTP, RDP Run default scripts with faster timing on 10.0.0.0/28",
+    "output": "nmap -T5 --script default -p 80,3389 10.0.0.0/28"
+  },
+  {
+    "input": "Scan ports for HTTP, FTP, SMTP and version detection Run malware scripts with faster timing and traceroute on 192.168.1.0/28",
+    "output": "nmap -sV --traceroute -T5 --script malware -p 21,25,80 192.168.1.0/28"
+  },
+  {
+    "input": "Scan ports for HTTP, HTTPS, MySQL, SNMP using UDP scan and version detection Run default,vuln scripts with faster timing on 192.168.1.0/16",
+    "output": "nmap -sU -sV -T5 --script default,vuln -p 80,161,443,3306 192.168.1.0/16"
+  },
+  {
+    "input": "Scan ports for HTTP, HTTPS, SMTP, SNMP using TCP connect scan and version detection Run discovery scripts on 192.168.0.0/24",
+    "output": "nmap -sT -sV --script discovery -p 25,80,161,443 192.168.0.0/24"
+  },
+  {
+    "input": "Scan ports for FTP Perform OS detection and version detection with faster timing on 192.168.1.0/16",
+    "output": "nmap -O -sV -T5 -p 21 192.168.1.0/16"
+  },
+  {
+    "input": "Scan ports for HTTPS, Telnet using SYN scan Perform OS detection with faster timing on 192.168.1.205",
+    "output": "nmap -sS -O -T5 -p 23,443 192.168.1.205"
+  },
+  {
+    "input": "Scan ports for HTTP, HTTPS, FTP, SNMP using SYN scan Perform OS detection with faster timing on 192.168.1.0/16",
+    "output": "nmap -sS -O -T5 -p 21,80,161,443 192.168.1.0/16"
+  },
+  {
+    "input": "Scan ports for HTTP, SMTP, RDP, Telnet using TCP connect scan Run auth scripts on 10.0.0.0/24",
+    "output": "nmap -sT --script auth -p 23,25,80,3389 10.0.0.0/24"
+  },
+  {
+    "input": "Scan ports for SNMP and version detection with faster timing on 192.168.0.0/28",
+    "output": "nmap -sV -T5 -p 161 192.168.0.0/28"
+  },
+  {
+    "input": "Scan ports for HTTPS, MySQL, Telnet Perform OS detection and version detection with faster timing on 192.168.1.0/16",
+    "output": "nmap -O -sV -T5 -p 23,443,3306 192.168.1.0/16"
+  },
+  {
+    "input": "Scan all ports using SYN scan and version detection on 192.168.0.37",
+    "output": "nmap -sS -p- -sV 192.168.0.37"
+  },
+  {
+    "input": "Scan ports for SMTP, SNMP using UDP scan and version detection with faster timing on 192.168.100.0/24",
+    "output": "nmap -sU -sV -T5 -p 25,161 192.168.100.0/24"
+  },
+  {
+    "input": "Scan ports for RDP Perform OS detection and version detection Run default,vuln scripts on 192.168.1.227",
+    "output": "nmap -O -sV --script default,vuln -p 3389 192.168.1.227"
+  },
+  {
+    "input": "Scan ports for MySQL, Telnet Run default,vuln scripts with faster timing on 192.168.100.65",
+    "output": "nmap -T5 --script default,vuln -p 23,3306 192.168.100.65"
+  },
+  {
+    "input": "Scan ports for Telnet using TCP connect scan and version detection Run default,vuln scripts on 192.168.0.0/28",
+    "output": "nmap -sT -sV --script default,vuln -p 23 192.168.0.0/28"
+  },
+  {
+    "input": "Scan ports for HTTPS, FTP, MySQL, RDP and version detection and traceroute on 192.168.1.0/24",
+    "output": "nmap -sV --traceroute -p 21,443,3306,3389 192.168.1.0/24"
+  },
+  {
+    "input": "Scan ports for HTTP using UDP scan Perform OS detection on 192.168.100.35",
+    "output": "nmap -sU -O -p 80 192.168.100.35"
+  },
+  {
+    "input": "Scan ports for FTP, MySQL using TCP connect scan and version detection Run vuln scripts with faster timing on 192.168.0.157",
+    "output": "nmap -sT -sV -T5 --script vuln -p 21,3306 192.168.0.157"
+  },
+  {
+    "input": "Scan ports for HTTP, SMTP, Telnet and version detection with faster timing on 10.0.0.0/16",
+    "output": "nmap -sV -T5 -p 23,25,80 10.0.0.0/16"
+  },
+  {
+    "input": "Scan all ports using UDP scan Run vuln scripts with faster timing on 192.168.0.0/24",
+    "output": "nmap -sU -p- -T5 --script vuln 192.168.0.0/24"
+  },
+  {
+    "input": "Scan ports for HTTP, SMTP, DNS, Telnet using SYN scan and version detection on 172.16.0.0/16",
+    "output": "nmap -sS -sV -p 23,25,53,80 172.16.0.0/16"
+  },
+  {
+    "input": "Scan all ports using SYN scan Perform OS detection and version detection with faster timing on 192.168.0.0/24",
+    "output": "nmap -sS -p- -O -sV -T5 192.168.0.0/24"
+  },
+  {
+    "input": "Scan all ports using UDP scan Perform OS detection and version detection Run default scripts on 192.168.1.0/16",
+    "output": "nmap -sU -p- -O -sV --script default 192.168.1.0/16"
+  },
+  {
+    "input": "Scan all ports and version detection using IPv6 on 2001:db8::5647",
+    "output": "nmap -6 -p- -sV 2001:db8::5647"
+  },
+  {
+    "input": "Scan ports for HTTP, DNS, RDP and version detection Run default scripts on 192.168.1.0/24",
+    "output": "nmap -sV --script default -p 53,80,3389 192.168.1.0/24"
+  },
+  {
+    "input": "Scan ports for SSH, HTTPS, FTP using UDP scan and version detection on 10.0.0.0/28",
+    "output": "nmap -sU -sV -p 21,22,443 10.0.0.0/28"
+  },
+  {
+    "input": "Scan all ports using TCP connect scan Perform OS detection on 172.16.0.193",
+    "output": "nmap -sT -p- -O 172.16.0.193"
+  },
+  {
+    "input": "Scan ports for HTTPS, SMTP using SYN scan and version detection Run discovery scripts with faster timing and traceroute on 192.168.0.0/16",
+    "output": "nmap -sS -sV --traceroute -T5 --script discovery -p 25,443 192.168.0.0/16"
+  },
+  {
+    "input": "Scan ports for FTP, RDP using UDP scan Perform OS detection Run auth scripts with faster timing and traceroute on 172.16.0.74",
+    "output": "nmap -sU -O --traceroute -T5 --script auth -p 21,3389 172.16.0.74"
+  },
+  {
+    "input": "Scan ports for SMTP, DNS, MySQL, SNMP using UDP scan Perform OS detection and version detection Run default,vuln scripts with faster timing on 172.16.0.0/24",
+    "output": "nmap -sU -O -sV -T5 --script default,vuln -p 25,53,161,3306 172.16.0.0/24"
+  },
+  {
+    "input": "Scan ports for HTTP, HTTPS, FTP, SMTP Perform OS detection and version detection Run safe scripts with faster timing and traceroute on 192.168.100.0/16",
+    "output": "nmap -O -sV --traceroute -T5 --script safe -p 21,25,80,443 192.168.100.0/16"
+  },
+  {
+    "input": "Scan ports for FTP, SMTP using TCP connect scan Perform OS detection and version detection Run discovery scripts with faster timing on 192.168.100.0/24",
+    "output": "nmap -sT -O -sV -T5 --script discovery -p 21,25 192.168.100.0/24"
+  },
+  {
+    "input": "Scan ports for SMTP, Telnet using TCP connect scan Perform OS detection and version detection Run auth scripts using IPv6 on 2001:db8::4667",
+    "output": "nmap -6 -sT -O -sV --script auth -p 23,25 2001:db8::4667"
+  },
+  {
+    "input": "Scan ports for SMTP, SNMP using SYN scan Perform OS detection and version detection Run safe scripts with faster timing on 10.0.0.111",
+    "output": "nmap -sS -O -sV -T5 --script safe -p 25,161 10.0.0.111"
+  },
+  {
+    "input": "Scan ports for SSH using SYN scan and version detection Run default,vuln scripts with faster timing and traceroute on 192.168.1.248",
+    "output": "nmap -sS -sV --traceroute -T5 --script default,vuln -p 22 192.168.1.248"
+  },
+  {
+    "input": "Scan ports for HTTPS, FTP, SNMP using UDP scan Perform OS detection and version detection Run vuln scripts and traceroute on 192.168.1.0/28",
+    "output": "nmap -sU -O -sV --traceroute --script vuln -p 21,161,443 192.168.1.0/28"
+  },
+  {
+    "input": "Scan all ports using SYN scan Run auth scripts with faster timing and traceroute on 172.16.0.0/28",
+    "output": "nmap -sS -p- --traceroute -T5 --script auth -p 113 172.16.0.0/28"
+  },
+  {
+    "input": "Scan ports for MySQL, SNMP using UDP scan and version detection Run default scripts with faster timing and traceroute on 172.16.0.63",
+    "output": "nmap -sU -sV --traceroute -T5 --script default -p 161,3306 172.16.0.63"
+  },
+  {
+    "input": "Scan ports for SMTP, DNS using SYN scan Perform OS detection and version detection Run default,vuln scripts with faster timing on 192.168.100.0/16",
+    "output": "nmap -sS -O -sV -T5 --script default,vuln -p 25,53 192.168.100.0/16"
+  }
+]
