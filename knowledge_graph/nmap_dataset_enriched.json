@@ -1,0 +1,1005 @@
+[
+  {
+    "query": "scan for web servers on 192.168.1.1",
+    "command": "nmap -p 80,443 -sV 192.168.1.1",
+    "services": [
+      "HTTP",
+      "HTTPS"
+    ],
+    "ports": "80,443",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for web servers on 10.0.0.1",
+    "command": "nmap -p 80,443 -sV 10.0.0.1",
+    "services": [
+      "HTTP",
+      "HTTPS"
+    ],
+    "ports": "80,443",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for web servers on 172.16.0.1",
+    "command": "nmap -p 80,443 -sV 172.16.0.1",
+    "services": [
+      "HTTP",
+      "HTTPS"
+    ],
+    "ports": "80,443",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for web servers on 192.168.1.0/24",
+    "command": "nmap -p 80,443 -sV 192.168.1.0/24",
+    "services": [
+      "HTTP",
+      "HTTPS"
+    ],
+    "ports": "80,443",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for HTTP on 192.168.1.1",
+    "command": "nmap -p 80 -sV 192.168.1.1",
+    "services": [
+      "HTTP"
+    ],
+    "ports": "80",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for HTTP on 10.0.0.1",
+    "command": "nmap -p 80 -sV 10.0.0.1",
+    "services": [
+      "HTTP"
+    ],
+    "ports": "80",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for HTTP on 172.16.0.1",
+    "command": "nmap -p 80 -sV 172.16.0.1",
+    "services": [
+      "HTTP"
+    ],
+    "ports": "80",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for HTTP on 192.168.1.0/24",
+    "command": "nmap -p 80 -sV 192.168.1.0/24",
+    "services": [
+      "HTTP"
+    ],
+    "ports": "80",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for HTTPS on 192.168.1.1",
+    "command": "nmap -p 443 -sV 192.168.1.1",
+    "services": [
+      "HTTPS"
+    ],
+    "ports": "443",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for HTTPS on 10.0.0.1",
+    "command": "nmap -p 443 -sV 10.0.0.1",
+    "services": [
+      "HTTPS"
+    ],
+    "ports": "443",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for HTTPS on 172.16.0.1",
+    "command": "nmap -p 443 -sV 172.16.0.1",
+    "services": [
+      "HTTPS"
+    ],
+    "ports": "443",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for HTTPS on 192.168.1.0/24",
+    "command": "nmap -p 443 -sV 192.168.1.0/24",
+    "services": [
+      "HTTPS"
+    ],
+    "ports": "443",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for SSH on 192.168.1.1",
+    "command": "nmap -p 22 -sV 192.168.1.1",
+    "services": [
+      "SSH"
+    ],
+    "ports": "22",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for SSH on 10.0.0.1",
+    "command": "nmap -p 22 -sV 10.0.0.1",
+    "services": [
+      "SSH"
+    ],
+    "ports": "22",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for SSH on 172.16.0.1",
+    "command": "nmap -p 22 -sV 172.16.0.1",
+    "services": [
+      "SSH"
+    ],
+    "ports": "22",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for SSH on 192.168.1.0/24",
+    "command": "nmap -p 22 -sV 192.168.1.0/24",
+    "services": [
+      "SSH"
+    ],
+    "ports": "22",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for Telnet on 192.168.1.1",
+    "command": "nmap -p 23 -sV 192.168.1.1",
+    "services": [
+      "Telnet"
+    ],
+    "ports": "23",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for Telnet on 10.0.0.1",
+    "command": "nmap -p 23 -sV 10.0.0.1",
+    "services": [
+      "Telnet"
+    ],
+    "ports": "23",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for Telnet on 172.16.0.1",
+    "command": "nmap -p 23 -sV 172.16.0.1",
+    "services": [
+      "Telnet"
+    ],
+    "ports": "23",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for Telnet on 192.168.1.0/24",
+    "command": "nmap -p 23 -sV 192.168.1.0/24",
+    "services": [
+      "Telnet"
+    ],
+    "ports": "23",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for RDP on 192.168.1.1",
+    "command": "nmap -p 3389 -sV 192.168.1.1",
+    "services": [
+      "RDP"
+    ],
+    "ports": "3389",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for RDP on 10.0.0.1",
+    "command": "nmap -p 3389 -sV 10.0.0.1",
+    "services": [
+      "RDP"
+    ],
+    "ports": "3389",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for RDP on 172.16.0.1",
+    "command": "nmap -p 3389 -sV 172.16.0.1",
+    "services": [
+      "RDP"
+    ],
+    "ports": "3389",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for RDP on 192.168.1.0/24",
+    "command": "nmap -p 3389 -sV 192.168.1.0/24",
+    "services": [
+      "RDP"
+    ],
+    "ports": "3389",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for remote access services on 192.168.1.1",
+    "command": "nmap -p 22,23,3389 -sV 192.168.1.1",
+    "services": [
+      "SSH",
+      "Telnet",
+      "RDP"
+    ],
+    "ports": "22,23,3389",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for remote access services on 10.0.0.1",
+    "command": "nmap -p 22,23,3389 -sV 10.0.0.1",
+    "services": [
+      "SSH",
+      "Telnet",
+      "RDP"
+    ],
+    "ports": "22,23,3389",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for remote access services on 172.16.0.1",
+    "command": "nmap -p 22,23,3389 -sV 172.16.0.1",
+    "services": [
+      "SSH",
+      "Telnet",
+      "RDP"
+    ],
+    "ports": "22,23,3389",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for remote access services on 192.168.1.0/24",
+    "command": "nmap -p 22,23,3389 -sV 192.168.1.0/24",
+    "services": [
+      "SSH",
+      "Telnet",
+      "RDP"
+    ],
+    "ports": "22,23,3389",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for mail servers on 192.168.1.1",
+    "command": "nmap -p 25,110,143 -sV 192.168.1.1",
+    "services": [
+      "SMTP",
+      "POP3",
+      "IMAP"
+    ],
+    "ports": "25,110,143",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for mail servers on 10.0.0.1",
+    "command": "nmap -p 25,110,143 -sV 10.0.0.1",
+    "services": [
+      "SMTP",
+      "POP3",
+      "IMAP"
+    ],
+    "ports": "25,110,143",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for mail servers on 172.16.0.1",
+    "command": "nmap -p 25,110,143 -sV 172.16.0.1",
+    "services": [
+      "SMTP",
+      "POP3",
+      "IMAP"
+    ],
+    "ports": "25,110,143",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for mail servers on 192.168.1.0/24",
+    "command": "nmap -p 25,110,143 -sV 192.168.1.0/24",
+    "services": [
+      "SMTP",
+      "POP3",
+      "IMAP"
+    ],
+    "ports": "25,110,143",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for SMTP on 192.168.1.1",
+    "command": "nmap -p 25 -sV 192.168.1.1",
+    "services": [
+      "SMTP"
+    ],
+    "ports": "25",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for SMTP on 10.0.0.1",
+    "command": "nmap -p 25 -sV 10.0.0.1",
+    "services": [
+      "SMTP"
+    ],
+    "ports": "25",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for SMTP on 172.16.0.1",
+    "command": "nmap -p 25 -sV 172.16.0.1",
+    "services": [
+      "SMTP"
+    ],
+    "ports": "25",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for SMTP on 192.168.1.0/24",
+    "command": "nmap -p 25 -sV 192.168.1.0/24",
+    "services": [
+      "SMTP"
+    ],
+    "ports": "25",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for email services on 192.168.1.1",
+    "command": "nmap -p 25,110,143 -sV 192.168.1.1",
+    "services": [
+      "SMTP",
+      "POP3",
+      "IMAP"
+    ],
+    "ports": "25,110,143",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for email services on 10.0.0.1",
+    "command": "nmap -p 25,110,143 -sV 10.0.0.1",
+    "services": [
+      "SMTP",
+      "POP3",
+      "IMAP"
+    ],
+    "ports": "25,110,143",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for email services on 172.16.0.1",
+    "command": "nmap -p 25,110,143 -sV 172.16.0.1",
+    "services": [
+      "SMTP",
+      "POP3",
+      "IMAP"
+    ],
+    "ports": "25,110,143",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for email services on 192.168.1.0/24",
+    "command": "nmap -p 25,110,143 -sV 192.168.1.0/24",
+    "services": [
+      "SMTP",
+      "POP3",
+      "IMAP"
+    ],
+    "ports": "25,110,143",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for database services on 192.168.1.1",
+    "command": "nmap -p 1433,3306,5432 -sV 192.168.1.1",
+    "services": [
+      "MySQL",
+      "PostgreSQL",
+      "MSSQL"
+    ],
+    "ports": "1433,3306,5432",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for database services on 10.0.0.1",
+    "command": "nmap -p 1433,3306,5432 -sV 10.0.0.1",
+    "services": [
+      "MySQL",
+      "PostgreSQL",
+      "MSSQL"
+    ],
+    "ports": "1433,3306,5432",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for database services on 172.16.0.1",
+    "command": "nmap -p 1433,3306,5432 -sV 172.16.0.1",
+    "services": [
+      "MySQL",
+      "PostgreSQL",
+      "MSSQL"
+    ],
+    "ports": "1433,3306,5432",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for database services on 192.168.1.0/24",
+    "command": "nmap -p 1433,3306,5432 -sV 192.168.1.0/24",
+    "services": [
+      "MySQL",
+      "PostgreSQL",
+      "MSSQL"
+    ],
+    "ports": "1433,3306,5432",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for MySQL on 192.168.1.1",
+    "command": "nmap -p 3306 -sV 192.168.1.1",
+    "services": [
+      "MySQL"
+    ],
+    "ports": "3306",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for MySQL on 10.0.0.1",
+    "command": "nmap -p 3306 -sV 10.0.0.1",
+    "services": [
+      "MySQL"
+    ],
+    "ports": "3306",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for MySQL on 172.16.0.1",
+    "command": "nmap -p 3306 -sV 172.16.0.1",
+    "services": [
+      "MySQL"
+    ],
+    "ports": "3306",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for MySQL on 192.168.1.0/24",
+    "command": "nmap -p 3306 -sV 192.168.1.0/24",
+    "services": [
+      "MySQL"
+    ],
+    "ports": "3306",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for PostgreSQL on 192.168.1.1",
+    "command": "nmap -p 5432 -sV 192.168.1.1",
+    "services": [
+      "PostgreSQL"
+    ],
+    "ports": "5432",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for PostgreSQL on 10.0.0.1",
+    "command": "nmap -p 5432 -sV 10.0.0.1",
+    "services": [
+      "PostgreSQL"
+    ],
+    "ports": "5432",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for PostgreSQL on 172.16.0.1",
+    "command": "nmap -p 5432 -sV 172.16.0.1",
+    "services": [
+      "PostgreSQL"
+    ],
+    "ports": "5432",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for PostgreSQL on 192.168.1.0/24",
+    "command": "nmap -p 5432 -sV 192.168.1.0/24",
+    "services": [
+      "PostgreSQL"
+    ],
+    "ports": "5432",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for MSSQL on 192.168.1.1",
+    "command": "nmap -p 1433 -sV 192.168.1.1",
+    "services": [
+      "MSSQL"
+    ],
+    "ports": "1433",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for MSSQL on 10.0.0.1",
+    "command": "nmap -p 1433 -sV 10.0.0.1",
+    "services": [
+      "MSSQL"
+    ],
+    "ports": "1433",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for MSSQL on 172.16.0.1",
+    "command": "nmap -p 1433 -sV 172.16.0.1",
+    "services": [
+      "MSSQL"
+    ],
+    "ports": "1433",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for MSSQL on 192.168.1.0/24",
+    "command": "nmap -p 1433 -sV 192.168.1.0/24",
+    "services": [
+      "MSSQL"
+    ],
+    "ports": "1433",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for DNS on 192.168.1.1",
+    "command": "nmap -p 53 -sV 192.168.1.1",
+    "services": [
+      "DNS"
+    ],
+    "ports": "53",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for DNS on 10.0.0.1",
+    "command": "nmap -p 53 -sV 10.0.0.1",
+    "services": [
+      "DNS"
+    ],
+    "ports": "53",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for DNS on 172.16.0.1",
+    "command": "nmap -p 53 -sV 172.16.0.1",
+    "services": [
+      "DNS"
+    ],
+    "ports": "53",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for DNS on 192.168.1.0/24",
+    "command": "nmap -p 53 -sV 192.168.1.0/24",
+    "services": [
+      "DNS"
+    ],
+    "ports": "53",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for SNMP on 192.168.1.1",
+    "command": "nmap -p 161 -sU 192.168.1.1",
+    "services": [
+      "SNMP"
+    ],
+    "ports": "161",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for SNMP on 10.0.0.1",
+    "command": "nmap -p 161 -sU 10.0.0.1",
+    "services": [
+      "SNMP"
+    ],
+    "ports": "161",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for SNMP on 172.16.0.1",
+    "command": "nmap -p 161 -sU 172.16.0.1",
+    "services": [
+      "SNMP"
+    ],
+    "ports": "161",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for SNMP on 192.168.1.0/24",
+    "command": "nmap -p 161 -sU 192.168.1.0/24",
+    "services": [
+      "SNMP"
+    ],
+    "ports": "161",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for FTP on 192.168.1.1",
+    "command": "nmap -p 21 -sV 192.168.1.1",
+    "services": [
+      "FTP"
+    ],
+    "ports": "21",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for FTP on 10.0.0.1",
+    "command": "nmap -p 21 -sV 10.0.0.1",
+    "services": [
+      "FTP"
+    ],
+    "ports": "21",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for FTP on 172.16.0.1",
+    "command": "nmap -p 21 -sV 172.16.0.1",
+    "services": [
+      "FTP"
+    ],
+    "ports": "21",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for FTP on 192.168.1.0/24",
+    "command": "nmap -p 21 -sV 192.168.1.0/24",
+    "services": [
+      "FTP"
+    ],
+    "ports": "21",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for file transfer services on 192.168.1.1",
+    "command": "nmap -p 20,21 -sV 192.168.1.1",
+    "services": [
+      "FTP",
+      "FTP-Data"
+    ],
+    "ports": "20,21",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan for file transfer services on 10.0.0.1",
+    "command": "nmap -p 20,21 -sV 10.0.0.1",
+    "services": [
+      "FTP",
+      "FTP-Data"
+    ],
+    "ports": "20,21",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for file transfer services on 172.16.0.1",
+    "command": "nmap -p 20,21 -sV 172.16.0.1",
+    "services": [
+      "FTP",
+      "FTP-Data"
+    ],
+    "ports": "20,21",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for file transfer services on 192.168.1.0/24",
+    "command": "nmap -p 20,21 -sV 192.168.1.0/24",
+    "services": [
+      "FTP",
+      "FTP-Data"
+    ],
+    "ports": "20,21",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for DNS, SNMP and Telnet on 172.16.0.254",
+    "command": "nmap -p 23,53,161 -sV 172.16.0.254",
+    "target": "172.16.0.254"
+  },
+  {
+    "query": "scan for DNS, SNMP and Telnet on 192.168.1.100",
+    "command": "nmap -p 23,53,161 -sV 192.168.1.100",
+    "target": "192.168.1.100"
+  },
+  {
+    "query": "scan for DNS, SNMP and Telnet on 10.0.0.50",
+    "command": "nmap -p 23,53,161 -sV 10.0.0.50",
+    "target": "10.0.0.50"
+  },
+  {
+    "query": "scan for web and mail servers on 172.16.0.254",
+    "command": "nmap -p 25,80,110,143,443 -sV 172.16.0.254",
+    "target": "172.16.0.254"
+  },
+  {
+    "query": "scan for web and mail servers on 192.168.1.100",
+    "command": "nmap -p 25,80,110,143,443 -sV 192.168.1.100",
+    "target": "192.168.1.100"
+  },
+  {
+    "query": "scan for web and mail servers on 10.0.0.50",
+    "command": "nmap -p 25,80,110,143,443 -sV 10.0.0.50",
+    "target": "10.0.0.50"
+  },
+  {
+    "query": "scan for SSH and FTP on 172.16.0.254",
+    "command": "nmap -p 21,22 -sV 172.16.0.254",
+    "target": "172.16.0.254"
+  },
+  {
+    "query": "scan for SSH and FTP on 192.168.1.100",
+    "command": "nmap -p 21,22 -sV 192.168.1.100",
+    "target": "192.168.1.100"
+  },
+  {
+    "query": "scan for SSH and FTP on 10.0.0.50",
+    "command": "nmap -p 21,22 -sV 10.0.0.50",
+    "target": "10.0.0.50"
+  },
+  {
+    "query": "scan for database and web services on 172.16.0.254",
+    "command": "nmap -p 80,443,1433,3306,5432 -sV 172.16.0.254",
+    "target": "172.16.0.254"
+  },
+  {
+    "query": "scan for database and web services on 192.168.1.100",
+    "command": "nmap -p 80,443,1433,3306,5432 -sV 192.168.1.100",
+    "target": "192.168.1.100"
+  },
+  {
+    "query": "scan for database and web services on 10.0.0.50",
+    "command": "nmap -p 80,443,1433,3306,5432 -sV 10.0.0.50",
+    "target": "10.0.0.50"
+  },
+  {
+    "query": "do a ping scan on 10.0.0.0/24",
+    "command": "nmap -sn 10.0.0.0/24",
+    "target": "10.0.0.0/24"
+  },
+  {
+    "query": "do a ping scan on 192.168.1.1",
+    "command": "nmap -sn 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "do a ping scan on 172.16.0.0/24",
+    "command": "nmap -sn 172.16.0.0/24",
+    "target": "172.16.0.0/24"
+  },
+  {
+    "query": "perform a SYN scan on 10.0.0.0/24",
+    "command": "nmap -sS 10.0.0.0/24",
+    "target": "10.0.0.0/24"
+  },
+  {
+    "query": "perform a SYN scan on 192.168.1.1",
+    "command": "nmap -sS 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "perform a SYN scan on 172.16.0.0/24",
+    "command": "nmap -sS 172.16.0.0/24",
+    "target": "172.16.0.0/24"
+  },
+  {
+    "query": "do a TCP connect scan on 10.0.0.0/24",
+    "command": "nmap -sT 10.0.0.0/24",
+    "target": "10.0.0.0/24"
+  },
+  {
+    "query": "do a TCP connect scan on 192.168.1.1",
+    "command": "nmap -sT 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "do a TCP connect scan on 172.16.0.0/24",
+    "command": "nmap -sT 172.16.0.0/24",
+    "target": "172.16.0.0/24"
+  },
+  {
+    "query": "perform a UDP scan on 10.0.0.0/24",
+    "command": "nmap -sU 10.0.0.0/24",
+    "target": "10.0.0.0/24"
+  },
+  {
+    "query": "perform a UDP scan on 192.168.1.1",
+    "command": "nmap -sU 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "perform a UDP scan on 172.16.0.0/24",
+    "command": "nmap -sU 172.16.0.0/24",
+    "target": "172.16.0.0/24"
+  },
+  {
+    "query": "scan all ports on 10.0.0.0/24",
+    "command": "nmap -p- 10.0.0.0/24",
+    "target": "10.0.0.0/24"
+  },
+  {
+    "query": "scan all ports on 192.168.1.1",
+    "command": "nmap -p- 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan all ports on 172.16.0.0/24",
+    "command": "nmap -p- 172.16.0.0/24",
+    "target": "172.16.0.0/24"
+  },
+  {
+    "query": "do a full port scan on 10.0.0.0/24",
+    "command": "nmap -p- 10.0.0.0/24",
+    "target": "10.0.0.0/24"
+  },
+  {
+    "query": "do a full port scan on 192.168.1.1",
+    "command": "nmap -p- 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "do a full port scan on 172.16.0.0/24",
+    "command": "nmap -p- 172.16.0.0/24",
+    "target": "172.16.0.0/24"
+  },
+  {
+    "query": "perform OS detection on 192.168.1.1",
+    "command": "nmap -O 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "perform OS detection on 10.0.0.1",
+    "command": "nmap -O 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "perform OS detection on 172.16.0.1",
+    "command": "nmap -O 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "detect operating system on 192.168.1.1",
+    "command": "nmap -O 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "detect operating system on 10.0.0.1",
+    "command": "nmap -O 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "detect operating system on 172.16.0.1",
+    "command": "nmap -O 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan with version detection on 192.168.1.1",
+    "command": "nmap -sV 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan with version detection on 10.0.0.1",
+    "command": "nmap -sV 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan with version detection on 172.16.0.1",
+    "command": "nmap -sV 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "detect service versions on 192.168.1.1",
+    "command": "nmap -sV 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "detect service versions on 10.0.0.1",
+    "command": "nmap -sV 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "detect service versions on 172.16.0.1",
+    "command": "nmap -sV 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "aggressive scan on 192.168.1.1",
+    "command": "nmap -A 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "aggressive scan on 10.0.0.1",
+    "command": "nmap -A 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "aggressive scan on 172.16.0.1",
+    "command": "nmap -A 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan with scripts on 192.168.1.1",
+    "command": "nmap -sC 192.168.1.1",
+    "target": "192.168.1.1"
+  },
+  {
+    "query": "scan with scripts on 10.0.0.1",
+    "command": "nmap -sC 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan with scripts on 172.16.0.1",
+    "command": "nmap -sC 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "fast scan for web servers on 192.168.1.0/24",
+    "command": "nmap -p 80,443 -sV -T4 192.168.1.0/24",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "fast scan for web servers on 10.0.0.1",
+    "command": "nmap -p 80,443 -sV -T4 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "fast scan for web servers on 172.16.0.1",
+    "command": "nmap -p 80,443 -sV -T4 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "stealth scan for SSH on 192.168.1.0/24",
+    "command": "nmap -sS -p 22 -sV 192.168.1.0/24",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "stealth scan for SSH on 10.0.0.1",
+    "command": "nmap -sS -p 22 -sV 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "stealth scan for SSH on 172.16.0.1",
+    "command": "nmap -sS -p 22 -sV 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "aggressive scan with scripts on 192.168.1.0/24",
+    "command": "nmap -A -sC 192.168.1.0/24",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "aggressive scan with scripts on 10.0.0.1",
+    "command": "nmap -A -sC 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "aggressive scan with scripts on 172.16.0.1",
+    "command": "nmap -A -sC 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "scan for vulnerabilities on 192.168.1.0/24",
+    "command": "nmap -sV --script vuln 192.168.1.0/24",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "scan for vulnerabilities on 10.0.0.1",
+    "command": "nmap -sV --script vuln 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "scan for vulnerabilities on 172.16.0.1",
+    "command": "nmap -sV --script vuln 172.16.0.1",
+    "target": "172.16.0.1"
+  },
+  {
+    "query": "fast scan for database services on 192.168.1.0/24",
+    "command": "nmap -p 1433,3306,5432 -sV -T4 192.168.1.0/24",
+    "target": "192.168.1.0/24"
+  },
+  {
+    "query": "fast scan for database services on 10.0.0.1",
+    "command": "nmap -p 1433,3306,5432 -sV -T4 10.0.0.1",
+    "target": "10.0.0.1"
+  },
+  {
+    "query": "fast scan for database services on 172.16.0.1",
+    "command": "nmap -p 1433,3306,5432 -sV -T4 172.16.0.1",
+    "target": "172.16.0.1"
+  }
+]
