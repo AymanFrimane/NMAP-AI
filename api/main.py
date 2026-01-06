@@ -1,34 +1,33 @@
 """
-NMAP-AI FastAPI Application
-Main entry point for the API server.
-Main entry point for the REST API
-Person 4's API endpoints for validation
+NMAP-AI Main API
+Point d'entrée principal de l'API
 """
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
 import sys
 from pathlib import Path
 
-# Add project root to path
-project_root = Path(__file__).parent.parent
-sys.path.insert(0, str(project_root))
+# Ajouter le dossier api au path
+sys.path.insert(0, str(Path(__file__).parent))
 
-from api.routers import comprehend
+# Importer le router
+from routers.api import router as nmap_router
 
-import uvicorn
+# ============================================================================
+# APP
+# ============================================================================
 
-# Create FastAPI app
 app = FastAPI(
     title="NMAP-AI API",
-    description="Autonomous Nmap Command Generator with Knowledge Graph RAG + AI-powered Natural Language to Nmap Command Generator with Advanced Validation",
+    description="API REST pour générer des commandes nmap à partir de langage naturel",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
 )
 
-# Add CORS middleware
-# CORS middleware - allow all origins for development
+# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -37,117 +36,47 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include routers
-app.include_router(comprehend.router)
+# Inclure le router NMAP
+app.include_router(nmap_router)
 
+# ============================================================================
+# ROOT ENDPOINT
+# ============================================================================
 
-@app.get("/")
+@app.get("/", tags=["Info"])
 async def root():
-    """Root endpoint with API information."""
+    """Page d'accueil de l'API"""
     return {
-        "name": "NMAP-AI API",
-        "message": "NMAP-AI API is running",
+        "message": "NMAP-AI REST API",
         "version": "1.0.0",
-        "description": "Autonomous Nmap Command Generator",
         "docs": "/docs",
         "endpoints": {
-            "comprehension": "/comprehend",
-            "health": "/comprehend/health",
-            "docs": "/docs",
-            "health": "/health",
-            "validate": "/api/validate",
-            "generate": "/api/generate"
+            "health": "/nmap/health",
+            "generate": "/nmap/generate",
+            "batch": "/nmap/generate/batch",
+            "services": "/nmap/services",
+            "examples": "/nmap/examples"
         }
     }
+
 # ============================================================================
-# Health Check Endpoints
+# MAIN
 # ============================================================================
-
-
-@app.get("/health")
-async def health():
-    """Global health check."""
-    return {
-        "status": "healthy",
-        "service": "nmap-ai-api"
-    }
-
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
-async def health_check():
-    """
-    Health check endpoint for Docker
+    """Lance le serveur"""
     
-    Returns:
-        Simple health status
-    """
-    return {"status": "healthy"}
-
-
-# ============================================================================
-# Include Routers
-# ============================================================================
-
-# Import and include the NMAP-AI router
-try:
-    from api.routers import nmap_ai
-    app.include_router(nmap_ai.router, prefix="/api", tags=["NMAP-AI"])
-    print("✅ NMAP-AI router loaded successfully")
-except ImportError as e:
-    print(f"⚠️  Warning: Could not load nmap_ai router: {e}")
-    print("   API will work but /api/validate and /api/generate won't be available")
-except Exception as e:
-    print(f"❌ Error loading nmap_ai router: {e}")
-
-
-# ============================================================================
-# Startup/Shutdown Events
-# ============================================================================
-
-@app.on_event("startup")
-async def startup_event():
-    """
-    Run on application startup
-    """
-    print("=" * 70)
-    print("🚀 NMAP-AI API Starting...")
-    print("=" * 70)
-    print("\n📡 Available endpoints:")
-    print("   • GET  /          - API info")
-    print("   • GET  /health    - Health check")
-    print("   • GET  /docs      - Swagger UI")
-    print("   • POST /api/validate - Validate nmap command")
-    print("   • POST /api/generate - Generate nmap command")
-    print("\n" + "=" * 70 + "\n")
-
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    """
-    Run on application shutdown
-    """
-    print("\n🛑 NMAP-AI API shutting down...")
-
-
-# ============================================================================
-# Run Application
-# ============================================================================
-
-if __name__ == "__main__":
-    print("\n" + "=" * 70)
-    print("Starting NMAP-AI API Server")
-    print("=" * 70)
-    print("\n📍 Server will be available at:")
-    print("   • http://localhost:8000")
-    print("   • http://localhost:8000/docs (Swagger UI)")
-    print("\n⚠️  Press Ctrl+C to stop\n")
+    print("="*70)
+    print("🚀 NMAP-AI REST API")
+    print("="*70)
+    print("📡 Serveur: http://localhost:8000")
+    print("📚 Documentation: http://localhost:8000/docs")
+    print("🔄 Alternative docs: http://localhost:8000/redoc")
+    print("="*70)
     
     uvicorn.run(
-        "api.main:app",
+        app,
         host="0.0.0.0",
         port=8000,
-        reload=True,
         log_level="info"
     )
