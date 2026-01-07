@@ -1,5 +1,5 @@
 ---
-base_model: t5-small
+base_model: t5-base
 library_name: peft
 tags:
 - base_model:adapter:t5-small
@@ -203,4 +203,4 @@ Carbon emissions can be estimated using the [Machine Learning Impact calculator]
 [More Information Needed]
 ### Framework versions
 
-- PEFT 0.18.0
+- PEFT 0.13.2
