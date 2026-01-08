@@ -1,0 +1,30 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system deps
+RUN apt-get update && apt-get install -y curl && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements.txt .
+
+# Install Python deps
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir gradio
+
+# Copy demo directory
+COPY demo/ ./demo/
+
+# Environment
+ENV PYTHONUNBUFFERED=1
+ENV API_URL=http://api:8000
+
+EXPOSE 7860
+
+HEALTHCHECK --interval=30s --timeout=10s \
+    CMD curl -f http://localhost:7860 || exit 1
+
+# Start Gradio
+CMD ["python", "demo/gradio_app.py"]

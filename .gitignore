@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+.vscode/
+*.log
+.venv/
+.\agents\hard\models\t5-base*.safetensors
+*.bin
+agents/hard/models/
+agents/easy_medium/models/nmap_adapter_premiumagents/easy_medium/models/
